@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `retengcms_member`;
+DROP TABLE IF EXISTS `retengcms_member_cache`;
+DROP TABLE IF EXISTS `retengcms_membermodel`;
+DROP TABLE IF EXISTS `retengcms_membergrade`;
+DROP TABLE IF EXISTS `retengcms_membergroup`;
+DROP TABLE IF EXISTS `retengcms_memberhonor`;
+DROP TABLE IF EXISTS `retengcms_memberdb_fields`;
+DROP TABLE IF EXISTS `retengcms_message`;
+DROP TABLE IF EXISTS `retengcms_collect`;

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$head[title]} - Powered by ZLCGroup</title>
+<meta name="keywords" content="{$head[keywords]}"/>
+<meta name="description" content="{$head[description]}"/>
+<meta name="generator" content="zlcgroup.com"/>
+<meta name="author" content="zlcgroup.com"/>
+<meta name="copyright" content="2015 zlcgroup.com"/>
+<link media="screen" type="text/css" href="{$RETENG[tlp_path]}css/style.css" rel="stylesheet">
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery.KinSlideshow-1.2.1.min.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}js/base.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#focusNews").KinSlideshow();
+    })
+</script>
+</head>
+<body>
+{tlp header}
+<div class="boxwrap">
+  <div class="left710">
+    <div class="main_box">
+      <div class="left300">
+        <div id="focusNews" class="ifocus">
+          {reteng:content posid="5" row="5" withthumb="1"}
+          <a title="{field:title}" href="{field:url}"><img src="{field:thumb}" alt="{field:title}"/></a>
+          {/reteng:content}
+        </div>
+      </div>
+      <div class="right350">
+        <div class="newsToppic">
+          <dl>
+            <dt>{reteng:content posid="1" row="1" }
+              <strong><a title="{field:title}" href="{field:url}">{sub_string(field:title,46)}</a></strong>
+              <p>{sub_string(field:description,150,'...')} <a href="{field:url}">[详细]</a></p>{/reteng:content}  
+            </dt>
+			{reteng:content  row="7" orderby="clicks DESC" ismore="0"}
+            <dd><span>{date('Y-m-d',field:updatetime)}</span><a title="{field:title}" href="{field:url}">{sub_string(field:title,46)}</a></dd>
+            {/reteng:content}
+          </dl>
+        </div>
+      </div>
+	  {reteng:category row=6 mod=1 type="top"}
+      <div class="line20"></div>
+      <dl class="head blue">
+        <dt>{field:catname}</dt>
+        <dd>
+          <span><a href="{field:url}" title="查看更多" class="arrow">更多&gt;</a></span>
+        </dd>
+      </dl>
+      <div class="line10"></div>
+      <div class="newsToplist">
+        <div class="list">
+          <div class="left325">
+            <dl>
+              {reteng:content row='3' limit="0" withthumb="1" catid="$catid" infolen="150"}
+              <dt>
+                <a title="{field:title}" href="{field:url}"><img width="110" height="110" src="{field:thumb}" alt="{field:title}" /></a>
+                <strong><a href="{field:url}" title="{field:title}">{sub_string(field:title,46)}</a></strong>
+                <p>{sub_string(field:description,100,'...')}</p>
+              </dt>
+              {/reteng:content}
+            </dl>
+          </div>
+          <div class="right325">
+            <dl>
+             {reteng:content row='10' limit="0" catid="$catid"}
+              <dd><span>{date('Y-m-d',field:updatetime)}</span><a title="{field:title}" href="{field:url}">{sub_string(field:title,42)}</a></dd>
+              {/reteng:content}
+            </dl>
+          </div>
+        </div>
+      </div>
+      {/reteng:category}
+    </div>
+  </div>
+  <div class="left264">
+    <div class="sidebar">
+      <div class="clear"></div>
+      <h3>推荐资讯</h3>
+      <ul class="newsRedlist">
+	  {reteng:content catid="$catid" posid="3" row="10" limit="0" withthumb="0"}
+        <li><a title="{field:title}" href="{field:url}">{sub_string(field:title,40)}</a></li>
+       {/reteng:content}
+      </ul>
+      <h3>图片资讯</h3>
+      <div class="focus_list">
+        <ul>
+          {reteng:content catid="$catid" posid="0" row="9" limit="0" withthumb="1" ismore="0"}
+          <li>
+            <a title="{field:title}" href="{field:url}">
+              <img src="{field:thumb}" width="100" height="100" alt="{field:title}" />
+              <span>{sub_string(field:title,8,'...')}</span>
+            </a>
+          </li>
+          {/reteng:content}
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <h3>人气排行</h3>
+      <ul class="rank_list">
+        {reteng:content  catid="$catid" row="10" titlelen="38" orderby="clicks DESC" ismore="0" infolen="100"}
+		{if field:autoindex<2}
+		<li class="active">
+		<span>{date('Y-m-d',field:updatetime)}</span>
+          <i class="num">1</i><a href="{field:url}">{sub_string(field:title,26,'...')}</a>
+		</li>
+		{else}
+		<li>
+		<span>{date('Y-m-d',field:updatetime)}</span>
+          <i class="num">{field:autoindex}</i><a href="{field:url}">{sub_string(field:title,26,'...')}</a>
+		</li>
+		{/if}
+        {/reteng:content}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="boxwrap" style="border-top:0;">
+  <div class="iphoto_list">
+  </div>
+  <div class="clear"></div>
+  <div class="ilink_list">
+    <h3>友情链接</h3>
+    <p class="txt">
+	 {reteng:flink row="10" withlogo="0" isindex="0" typeid="1,2"}
+      <a target="_blank" href="{field:url}">{field:name}</a> | 
+      {/reteng:flink}
+    </p>
+  </div>
+</div>
+<div class="clear"></div>
+{tlp footer}
+</body>
+</html>

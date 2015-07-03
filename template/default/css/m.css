@@ -1,0 +1,26 @@
+/*s: member */
+#login{position:relative;height:360px;background:url(../img/login_bg.jpg) no-repeat;border-radius:5px}
+	#login_main{position:absolute;top:40px;right:20px;width:320px;box-shadow:2px 2px 5px rgba(0,0,0,0.2)}
+
+#member_usage_agreement{padding:10px 20px;height:160px;overflow:auto;border:1px solid #eee;background:#fafafa;border-radius:3px}
+#member_usage_agreement p{padding:0 0 10px}
+
+.member_info{padding:0 10px;border:1px solid #fb9;font-size:12px;background:#fff7e5}
+/*e: member */
+
+/*s: formTable */
+.formTable{width:100%;background:#fff}
+.formTable th{font-weight:bold;font-size:27px;padding:20px 0 5px;font-family:"Microsoft YaHei",Verdana,Tahoma,Arial}
+.formTable td.inputTitle{font-weight:bold}
+.formTable td.inputArea{padding:5px 0;border-bottom:1px solid #e5e5e5}
+.formTable td.inputTip{color:#999;padding:5px 0;border-bottom:1px solid #e5e5e5}
+.formTable td.operation{padding:10px 0 20px}
+/*e: formTable */
+
+/*s: listTable */
+.listTable{border-collapse:collapse;border-spacing:0;width:100%;border-top:1px solid #e5e5e5;border-left:1px solid #e5e5e5;background:#fff}
+.listTable tr{}
+.listTable th{border-right:1px solid #ccc;border-bottom:1px solid #ccc;padding:0 10px;height:29px;line-height:29px;*line-height:28px;background:url(../img/repeat_x_bg.gif) 0 0 repeat-x}
+.listTable td{border-right:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:5px 10px;line-height:20px;font-size:12px}
+.listTable span.toggle_tr{display:inline-block;padding:0 5px 0 0;cursor:pointer}
+/*e: listTable */

@@ -1,0 +1,17 @@
+﻿  <div class="left264">
+    <div class="sidebar">
+      <h3>栏目导航</h3>
+      <ul>
+        {reteng:category type="top" nav="2" row="4"}
+        <li><a title="{field:catname}" href="{field:url}">{field:catname}</a></li>
+        {/reteng:category} 
+      </ul>
+      <h3>客户服务</h3>
+      <div class="section">
+        <p>电&nbsp;&nbsp;话：{$RETENG['site_telphone']}</p>
+        <p>联系QQ：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$RETENG['site_qq']}&site=qq&menu=yes" style="text-decoration:none;" title="联系QQ">{$RETENG['site_qq']}</a></p>
+        <p>E-mail：<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email={$RETENG['site_email']}" style="text-decoration:none;">{$RETENG['site_email']}</a></p>
+        <p>网&nbsp;&nbsp;站：<a target="_blank" href="{$RETENG['site_url']}">{$RETENG['site_url']}</a></p>
+      </div>
+    </div>
+  </div>

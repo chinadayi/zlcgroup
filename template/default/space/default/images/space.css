@@ -1,0 +1,114 @@
+/*### powered by: www.dayucms.com ###*/
+body,div,iframe,ul,li,ol,dl,dt,dd,p,table,form,th,td,legend,fieldset,input,button,select,textarea {margin: 0;padding: 0;font-weight: normal;font-style:normal;font-size: 14px;font-family: inherit;}
+body{font:12px/1.5 tahoma,arial,"\5b8b\4f53", sans-serif;color:#333333;background:url(../images/boybg.jpg); padding-top:4px}
+h1,h2,h3,h4,h5,h6,b,i,button,input,select,textarea{font-size:14px; font-weight:normal; font-style:normal; padding:0px}
+table{border-collapse:collapse; border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal; font-weight:normal;}
+ol,ul{list-style:none;}
+input,select,button,textarea{ font-family:arial, helvetica, sans-serif; padding:2px 0px; border:#ccc 1px solid; overflow:auto}
+input[type="submit"]{cursor:pointer;}
+a{color:#333;text-decoration: none;} /* 链接无下划线,有为underline */ 
+a:vote {color:#333;} /* 未访问的链接 */
+a:visited {color:#333;} /* 已访问的链接 */
+a:hover {color: #cc3300;text-decoration:underline;}/* 鼠标在链接上下沉效果 */
+a:active{blr:expression(this.onfocus=this.blur())}
+a:focus {outline:none;-moz-outline:none;}
+img {border:0;}
+ol,ul {list-style: none;}        i,em{font-style:normal;}
+.clear{clear:both; font-size:1px; height:0; line-height:0;}
+.clearfix{display:inline-block;}
+.clearfix:after{content:"."; clear:both; display:block; height:0; visibility:hidden;}
+html{overflow-y:scroll;}
+html{-webkit-text-size-adjust:none;}/* chrome minium font-size fixed */
+/* 通用样式 */
+.topcs{width:1004px; height:auto; max-height:auto;margin: 0 auto;padding:0px;overflow: hidden;background:url(../images/topbg.jpg) left bottom no-repeat;}
+.concs{width:1004px; height:auto; max-height:auto; margin: 0 auto;padding:0px;overflow: hidden;background:url(../images/conbg.gif) 0 0 repeat-y;}
+.botcs{width:1004px; height:97px; max-height:97px; margin: 0 auto; padding:0px;overflow: hidden;background:url(../images/botbg.gif) left top no-repeat;}
+.head{width:960px;margin: 0 auto;padding:0px;overflow:hidden;}
+.box{width:960px;margin: 0 auto;padding:0px;overflow:hidden;}
+.bot{margin-bottom:5px;}      
+.botm{ margin-bottom:8px;}      
+.boto{ margin-top:8px;}
+.bxx{border-bottom:1px #ccc dashed;}   
+.lw{ float:left;}       
+.rw{ float:right;}
+.hls{ height:20px; max-height:20px;}
+.page{margin:0px auto; clear:both; text-align:center; background-color:#fff; padding-bottom:20px}
+
+.topnamebg{width:1004px; height:226px; max-height:226px;margin: 0 auto;padding:0px;overflow: hidden;hidden;background:url(../images/green.jpg) left bottom no-repeat;}
+.gnames{height:auto;max-height:auto;overflow: hidden;padding:20px 0px 0px 30px;color:rgb(138,68,38);font-size:30px;font-weight:900;float:left;}
+.topnav{width:1004px; height:38px; max-height:38px;margin: 0 auto;padding:0px;overflow: hidden;background:url(../images/ttbg.gif) left bottom no-repeat; margin-bottom:30px;position: relative;}
+.topnav ul {font-size: 14px; left: 4px; overflow: hidden; width: 100%; line-height: 36px; position: absolute; height: 36px}
+.topnav li {padding-left: 2px; left: -2px; float: left; overflow: hidden; position: relative; height: 36px; font-size:14px; font-weight:bold;}
+.topnav li a {padding-right: 16px; padding-left: 16px; float: left; padding-bottom: 0px; color:rgb(138,68,38); padding-top: 0px}
+.topnav li a:link {color:rgb(138,68,38);text-decoration: none}
+.topnav li a:visited {color:rgb(138,68,38);text-decoration: none}
+.topnav li a:hover {color: #c30;text-decoration: underline}
+
+/* 内容样式 */
+.ge_l{ width:300px; height:auto;max-height:auto;overflow: hidden; float:left;}
+.ge_r{width:650px; height:auto;max-height:auto;overflow: hidden; float:right;}
+
+.ge_lz{width:298px;height:auto; max-height:auto; overflow: hidden;border:1px rgb(203,107,76) solid;}
+.ge_l_tit{height:34px; max-height:34px;line-height:34px; padding-top:1px; padding:0px 8px 0px 16px; background:url(../images/tbgs.gif) 0 -8px repeat-x;overflow: hidden;}
+.ge_l_tit strong{font-size:14px;color:#fff; float:left;}
+.ge_l_tit span{font-size:12px;color:#fff; float:right;}
+.ge_l_txt{height:auto; max-height:auto; overflow: hidden;background:#ffffff; padding:10px 8px 10px 8px;}
+.gephoto{width:181px; height:222px; max-height:222px;margin: 0 auto;padding:0px;overflow: hidden;background:url(../images/portraitbox.jpg) 0 0 no-repeat; padding:7px;}
+.gephoto img{width:181px; height:222px; max-height:222px;overflow: hidden;}
+
+.genanm{width:250px;height:50px;max-height:50px;line-height:40px;margin:0 auto;padding:0px;overflow:hidden;text-align:center;font-size:14px;}
+
+.gejias{width:250px; height:auto; max-height:auto;margin: 0 auto;padding:0px;overflow: hidden;}
+.gejias ul li{width:100px; height:25px; max-height:25px; line-height:25px;overflow: hidden; text-align:center;background:url(../images/jso_bg.png) 0 0 no-repeat; font-size:12px; float:left; margin:0px 0px 12px 14px; display:inline;}
+.gejias ul li a{width:100px; overflow: hidden; display:block;}
+.gejias ul li a:hover {color: #cc3300;text-decoration:underline;width:100px; overflow: hidden; display:block;}
+.geshu{width:260px; height:auto; max-height:auto;margin: 0 auto;padding:0px;overflow: hidden; border:1px #999 dashed; border-bottom:0px;}
+.geshu ul li{border-bottom:1px #999 dashed; font-size:12px; color:#930; line-height:30px; padding-left:6px;}
+.gefk{width:260px; height:auto; max-height:auto;margin: 0 auto;padding:0px;overflow: hidden;}
+.gefk dl{width:286px;height:auto; max-height:auto;float:left; padding-top:8px;}
+.gefk dl dt {width:80px;height:auto; max-height:auto;float:left;overflow:hidden; margin-right:10px;}
+.gefk dl dt a img {width:74px;height:74px;max-height:74px;padding:2px;background:#ffffff;border:1px solid #ccc;display:block;}
+.gefk dl dt span{font:normal 12px verdana; width:80px;height:32px;max-height:32px;text-align:center;line-height:32px;display:block; overflow:hidden;}
+
+.ge_rz{width:648px;height:auto; max-height:auto; overflow: hidden;border:1px rgb(203,107,76) solid;}
+.ge_r_tit{height:34px; max-height:34px;line-height:34px; padding-top:1px; padding:0px 8px 0px 16px; background:url(../images/tbgs.gif) 0 -8px repeat-x;overflow: hidden;}
+.ge_r_tit strong{font-size:14px;color:#fff; float:left;}
+.ge_r_tit span{font-size:12px;color:#666; float:right;}
+.ge_r_tit span a{ color:#fff;}
+.ge_r_tit span a:hover {color: #cc3300;text-decoration:underline;}
+.ge_r_txt{height:auto; max-height:auto; overflow: hidden;background:#ffffff; padding:10px 16px 10px 16px;}
+.ge_r_li{background:url(../images/arrow.gif) 0 8px no-repeat; padding-left:25px;height:30px; max-height:30px; line-height:30px;overflow: hidden;font-size:14px; margin:0px 0px 6px 0px; }
+.ge_r_li a {color:rgb(138,68,38);}
+.ge_r_li a:link {color:rgb(138,68,38);text-decoration: none}
+.ge_r_li a:visited {color:rgb(138,68,38);text-decoration: none}
+.ge_r_li a:hover {color: #c30;text-decoration: underline}
+.ge_r_tpt{ line-height:22px; font-size:12px; color:#666; text-indent:2em; border-bottom:#999 1px dashed; padding-bottom:6px; margin-bottom:10px;}
+
+.gezl{height:auto; max-height:auto; overflow: hidden;background:#ffffff; padding:10px 16px 16px 16px;}
+.gezl ul li{border-bottom:1px #999 dashed; font-size:12px; color:#930; line-height:30px; padding:6px 0px 0px 6px;}
+.spa{ width:120px; float:left; font-size:12px}
+
+.geliu{height:auto; max-height:auto; overflow: hidden;background:#ffffff; padding:10px 16px 16px 16px;}
+.geliu ul li{ font-size:12px; color:#000; line-height:30px; padding:6px 0px 6px 6px;}
+.geinp{height:32px;max-height:32px; line-height:32px;padding:0px 2px 0px 3px;border:1px solid #b5b8c8;background:#ffffff url(../images/inpubg.gif) 0 0 repeat-x;font-size:14px;font-family:arial, helvetica, sans-serif;vertical-align:middle;}
+.sub {width:70px;height:26px;max-height:26px;line-height:26px;background:url(../images/but_img.jpg) no-repeat 0 0;border:0px;color:#fff;cursor:pointer;float:left;font-size:12px; margin-right:15px;}
+
+.liulist{height:auto; max-height:auto; overflow: hidden;background:#FFFFFF; }
+.liulist_tit{padding:5px 8px 5px 8px; line-height:18px; font-size:12px; background:rgb(228,212,175); border:1px rgb(217,202,168) solid;}
+.liulist_tit span{ float:right;}
+.liulist_txt{padding:5px 8px 5px 8px; line-height:22px; font-size:12px;color:#666; text-indent:2em; margin-bottom:8px; border-bottom:1px #CCC dashed;background:#FFFFFF;}
+
+.haoy{height:auto; max-height:auto; overflow: hidden;background:#FFFFFF; }
+.haoy_kk{ width:285px;height:auto; max-height:auto; overflow: hidden; float:left;border:1px #CCC solid; padding:4px; margin:0px 0px 10px 10px; display:inline;background:#FFFFFF;}
+.haoy_pho{width:80px;height:80px; max-height:80px;border:1px #CCC solid; float:left;}
+.haoy_photxt{width:180px;height:80px; max-height:80px; float:right;}
+.haoy_photxt p{width:180px; line-height:26px; float:right; font-size:14px;}
+
+.foot{ margin-top:30px;height:auto; max-height:auto; overflow: hidden}
+.foot p{ line-height:24px; font-size:12px; color:#fff; text-align:center;}
+.foot p a{ color:#fff;}
+.foot p a:link {color:#fff;text-decoration: none}
+.foot p a:visited {color:#fff;text-decoration: none}
+.foot p a:hover {color: #c30;text-decoration: underline}

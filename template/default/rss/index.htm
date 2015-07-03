@@ -1,0 +1,48 @@
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 12px;
+}
+a {
+	font-size: 12px;
+}
+a{ font-size:12px; color:#999999; text-decoration:none}
+-->
+</style><table width="960" border="0" align="center" style="border:#CCCCCC solid 1px;">
+  <tr>
+    <td height="81" valign="top"><h3 align="center">什么是<strong>RSS</strong></h3>
+    <p>RSS 是一种简单的订阅方式。就像订报纸、杂志一样，您可以订阅任何喜欢的内容。 RSS服务由一系列栏目组成，每个栏目包括标题，介绍和网址链接。欲获取FT中文网的RSS服务，浏览最新FT中文网的新闻评论、分析及专栏作家文章等精彩内容，请看本页的详情。</p></td>
+  </tr>
+  <tr>
+    <td height="207" valign="top"><table width="960" border="0">
+      <tr>
+        <td height="30" colspan="2" bgcolor="#f3f3f3"><b>请选择以下您感兴趣的栏目添加到您的RSS软件中：</b></td>
+      </tr>
+      <tr>
+        <td width="686" valign="top">
+		
+{reteng:category  mod="1" nav="1,2,3"}
+		<table width="98%"  border="0" style=" border:#CCCCCC dotted 1px;">
+
+          <tr>
+            <td width="17%">{field:catname}</td>
+            <td width="57%"><a href="{$RETENG['site_url']}/list/?id={field:id}&do=rss" target="_blank">{$RETENG['site_url']}/list/?id={field:id}&do=rss</a></td>
+            <td width="26%"><a href="{$RETENG['site_url']}/list/?id={field:id}&do=rss" target="_blank"><img src="/images/rss_logo_smll.gif" width="44" height="16" border="0" /></a></td>
+          </tr>
+        </table>
+{/reteng:category}		</td>
+        <td width="264" valign="top" style=" border-left: #CCCCCC solid 1px;"><table width="100%" border="0">
+          <tr>
+            <td height="23" style="border-bottom:#CCCCCC solid 1px; border-top: #CCCCCC solid 1px;"><strong>最新阅读</strong></td>
+          </tr>
+		  {reteng:content  row="10"  orderby="id" orderbyway="DESC" ismore="1"}
+          <tr>
+            <td style="padding-left:20px;"><a href="{field:url}" title="{field:title}" >{sub_string(field:title,40,'...')}</a></td>
+          </tr>
+		  {/reteng:content}
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+

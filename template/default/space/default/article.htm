@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<meta name="keywords" content="{$head[keywords]}" />
+<meta name="description" content="{$head[description]}" />
+<base href="{$RETENG['site_url']}" />
+<title>{$head['title']}</title>
+<link href="template/default/space/default/images/space.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="topcs">
+    <div class="topnamebg" {if $banner}style="background:url({$banner}) no-repeat"{/if}><div class="gnames">{$name}</div></div>
+    <div class="topnav">
+
+      <ul>
+		<li><a href="space/index.php?id={$id}">空间首页</a></li>
+		<li><a href="space/index.php?id={$id}&action=article" class="nav">文章</a></li>
+		<li><a href="space/index.php?id={$id}&action=friends">好友</a></li>
+		<li><a href="space/index.php?id={$id}&action=profile">个人资料</a></li>
+		<li><a href="space/index.php?id={$id}&action=guestbook">留言板</a></li>
+		{if $_userid}
+		<li><a href="member/index.php?mod=space&file=space&action=info">管理中心</a></li>
+		{/if}
+      </ul>
+
+    </div>
+</div>
+<div class="concs">
+    <div class="box">
+        <div class="ge_l">
+            <div class="ge_lz botm">
+            <div class="ge_l_tit"><strong>个人档案</strong></div>
+            <div class="ge_l_txt">
+                <div class="gephoto"><img src="{$logo}" alt="{$name}" /></div>
+                <div class="genanm"><strong>{$name}</strong></div>
+                <div class="gejias">
+                <ul>
+                <li><a href="space/index.php?id={$id}&action=guestbook">给我留言</a></li>
+                <li><a href="member/index.php?file=msg&action=send&sendtouser={$username}">发送站内信</a></li>
+                <li><a href="space/index.php?id={$id}&action=newfriend">加为好友</a></li>
+                <li><a href="space/index.php?id={$id}&action=blackfriend">加入黑名单</a></li>
+                </ul>
+                </div>
+                <div class="botm"></div>
+                <div class="geshu">
+                <ul>
+                <li>会员等级： {$gradename}</li> 
+                <li>会员积分： {$point} 分</li> 
+                <li>登陆次数： {$logintimes} 次</li> 
+                <li>访问统计： {$visits} 次 </li>
+
+                </ul>
+                </div>
+            </div>
+            </div>
+            <div class="ge_lz">
+            <div class="ge_l_tit"><strong>最近访客</strong></div>
+            <div class="ge_l_txt">
+                
+                <div class="gefk ">
+                <dl>
+				{loop $visitors $_newvisitor}
+               <dt>
+                <a href="space/index.php?id={$_newvisitor['spaceid']}" target="_blank"><img src="{$_newvisitor['spacelogo']}" /></a>
+                <span><a href="space/index.php?id={$_newvisitor['spaceid']}" target="_blank">{$_newvisitor['spacename']}</a> </span>
+               </dt>
+               {/loop}
+               </dl>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- 个人主页右边 -->
+        <div class="ge_r">
+            <div class="ge_rz">
+            <div class="ge_r_tit"><span><a href="space/index.php?id={$id}&action=article">更多内容&raquo;</a></span><strong>最近内容</strong></div>
+				<div class="ge_r_txt">
+					{reteng:list row="8" page="$page" userid="$memberid"}
+					<div class="ge_r_li"><strong><a href="{field:url}" title="{field:title}" target="_blank">{sub_string(field:title,60)}</a></strong> </div>
+					<div class="ge_r_tpt">{sub_string(field:description,200)}</div>
+					{/reteng:list}
+				</div>
+				<div class="page">{$reteng_page}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="botcs">
+<div class="foot">
+	<p>
+	{reteng:category parentid="0" row="10" mod="2" type="top"}
+	<a href="{field:url}" target="_blank">{field:catname}</a> | 
+	{/reteng:category}
+	{if $install['link']}<a href="{$RETENG['site_url']}link/index.php">友情链接</a> | {/if}
+	{if $install['guestbook']}<a href="{$RETENG['site_url']}guestbook/index.php">在线留言</a> | {/if}
+	{if $install['notice']}<a href="{$RETENG['site_url']}notice/index.php">网站公告</a>{/if}
+	</p>
+	<p>{$RETENG['copyright']}</p>
+	<p><a href="http://www.retengcms.com/" target="_blank" style="color:#666; font-size:10px">Powered by <font  style="color:#669933"><b>DayuCMS 2011 Sp3</b></font> &copy;2011-2012</a> </p>
+</div>
+</div>
+</body>
+</html>
+

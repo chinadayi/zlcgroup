@@ -1,0 +1,57 @@
+      <link rel="stylesheet" href="{$RETENG[tlp_path]}css/validate.css" />
+      <link rel="stylesheet" href="{$RETENG[tlp_path]}css/pagination.css" />
+      <script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery.form.min.js"></script>
+      <script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/Validform_v5.3.2_min.js"></script>
+      <script type="text/javascript" src="{$RETENG[tlp_path]}scripts/lhgdialog/lhgdialog.js?skin=idialog"></script>
+      <script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery.pagination.js"></script>
+      <script type="text/javascript">
+        $(function(){
+          //初始化评论列表
+          AjaxPageList('#comment_list', '#pagination', 10, {comment_count}, '', '{$RETENG['tlp_path']}images/user_avatar.png');
+          //初始化发表评论表单
+          AjaxInitForm('comment_form', 'btnSubmit', 1);
+        });
+      </script>
+      <div class="comment_box">
+        <h3 class="base_tit"><span><a href="#Add">发表评论</a></span>共有{$comments}访客发表了评论</h3>
+        <ol id="comment_list" class="comment_list">
+		  {reteng:comment contentid="$id" row="10"}
+          <li>
+            <div class="floor">#</div>
+            <div class="avatar">
+              <img src="{$RETENG['tlp_path']}images/user_avatar.png" width="36" height="36" />
+            </div>
+            <div class="inner">
+              <p>{field:content}</p>
+              <div class="meta">
+                <span class="blue">{field:username}</span>
+                <span class="time">{date('Y-m-d',$r['addtime'])}</span>
+              </div>
+            </div>
+          </li>
+		  {/reteng:comment}
+        </ol>
+      </div>
+      <div class="line20"></div>
+      <div id="pagination" class="flickr">{$reteng_page}</div>
+      <div class="comment_add">
+        <h3 class="base_tit">我来说几句吧<a name="Add"></a></h3>
+		<form action="{$RETENG['retengcms_path']}comment/comment.php" method="post" name="commentform" id="commentform">
+		<input type="hidden" name="contentid" value="{$id}" />
+		<input type="hidden" name="parentid" id="parentid" value="0" />
+		<input type="hidden" name="do_submit" value="1" />
+		<input type="hidden" name="authkey" value="{md5(AUTH_KEY.$catid.$id)}" />
+		<span>用户名：</span>
+          <textarea id="txtContent" name="comment[username]" class="input" style="width:120px;height:22px;" datatype="*" sucmsg=" "></textarea>
+        <div class="comment_editor">
+		<span>内&nbsp;&nbsp;&nbsp;容：</span>
+          <textarea id="txtContent" name="comment[content]" class="input" style="width:600px;height:70px;" datatype="*" sucmsg=" "></textarea>
+        </div>
+        <div class="subcon">
+          <input id="btnSubmit" name="submit" class="btn right" type="submit" value="提交评论（Ctrl+Enter）" />
+          <span>验证码：</span>
+          <input id="txtCode" name="chkcode" type="text" class="input small" datatype="s4-4" errormsg="请填写4位验证码" sucmsg=" " onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('btnSubmit').click();return false};"  />
+          <a href="javascript:;" onclick="ToggleCode(this, '{$RETENG['retengcms_path']}api/imcode/checkcode.php');return false;"><img src="{$RETENG['retengcms_path']}api/imcode/checkcode.php" width="80" height="22" style="vertical-align:middle;" /> 看不清楚？</a>
+        </div>
+        </form>
+      </div>

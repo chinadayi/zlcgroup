@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<title>{catname($catid)}-{$RETENG[site_name]}</title>
+<meta name="keywords" content="{$head[keywords]}" />
+<meta name="description" content="{$head[description]}" />
+<meta name="generator" content="ReTeng.Org" />
+<meta name="author" content="ReTeng.Org" />
+<meta name="copyright" content="2014 热腾网" />
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+<link rel="stylesheet" href="{$RETENG['retengcms_path']}skin/css/style.css" />
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onSelectStart="return false">
+{tlp header}
+        <div class="service_banner">
+            <div class="service_nav_bg"> 
+            </div>       
+            <div class="service_nav">
+                <ul>
+				{reteng:category parentid="20" row="4" mod="1,2,4" type="son"}
+                    <li><a id="about{$no+1}" href="{field:url}">{field:catname}&nbsp;&nbsp;<span>/{field:_encatname}</span><p></p></a></li>
+				{/reteng:category} 
+                </ul>
+            </div>
+        </div>
+        <div class="service_ny_content">
+            <div class="services_sentence"></div>
+             <div class="wzjs_ny">
+	<div class="fwfw">
+		<ul>
+			{$content}
+		</ul>
+	</div>
+</div>  
+            <div class="swdx_ny"> 
+            </div>
+        </div>
+{tlp footer}
+    <script type="text/javascript">
+        var params = parseUrl();
+        if (params["id"] != null) {
+            $("a#about"+params["id"]).addClass("on");
+        } else {
+        $("a#about2").addClass("on");
+        }
+    </script>
+</body>
+</html>

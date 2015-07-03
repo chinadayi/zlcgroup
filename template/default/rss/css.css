@@ -1,0 +1,62 @@
+
+
+managingEditor, webMaster, title, link, description, copyright, lastBuildDate, pubDate 
+{ 
+display: block; font-size: medium; 
+}
+
+rss, item title, item link, item description, item 
+{
+display: block;
+font-weight: normal;
+font-size: 12pt;
+background-image: none;
+margin: 5px;
+background-color: #ffffcc;
+}
+
+image, image title, image height, image width, image url, category, ttl, generator, guid, language, docs, comments,pubDate
+{ 
+display: none; 
+}
+
+channel
+{
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 20px;
+margin: 0px auto;
+width: 100%;
+padding-top: 10px;
+
+}
+
+item
+{
+padding-right: 10px;
+display: block;
+padding-left: 10px;
+font-size: small;
+padding-bottom: 10px;
+margin: 20px 0px;
+width: 60%;
+line-height: 150%;
+padding-top: 10px;
+border:#CCCCCC 1px solid;
+text-align: left;
+}
+
+channel title
+{
+display: block;
+font-weight: bold;
+font-size: large;
+z-index: 1;
+position: relative;
+height: auto;
+}
+
+item title { font-weight: bold; font-size: 16px; display: block; height: auto; position: relative; z-index: 1}
+item link { margin-bottom: 9pt; }
+link { display: block; color: blue; text-decoration: underline; }
+info { display: block; margin: 3em 4em 3em 4em; color: Black; background: #FFFACD; border: solid #CCCC66 2px; text-align: center; padding: 1.5em; font-family: mono; font-size: small; }

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{catname($catid)}-{$RETENG[site_name]} - Powered by ZLCGroup</title>
+<meta name="keywords" content="{$head[keywords]}" />
+<meta name="description" content="{$head[description]}" />
+<meta name="generator" content="zlcgroup.com" />
+<meta name="author" content="zlcgroup.com" />
+<meta name="copyright" content="2015 中联创" />
+<link rel="stylesheet" href="{$RETENG[tlp_path]}css/validate.css" />
+<link type="text/css" rel="stylesheet" href="{$RETENG[tlp_path]}css/pagination.css" />
+<link rel="stylesheet" href="{$RETENG[tlp_path]}css/style.css" />
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery.form.min.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/lhgdialog/lhgdialog.js?skin=idialog"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}js/base.js"></script>
+</head>
+<body>
+{tlp header}
+<div class="boxwrap">
+  <div class="left710">
+    <div class="content">
+      <div class="meta">
+        <h1 class="meta-tit">{$catname}</h1>
+      </div>
+      <div class="comment_box">
+        <ol class="comment_list">
+          {loop $data $r}
+          <li>
+            <div class="floor">#
+			</div>
+            <div class="inner" style="margin-left:0;">
+              <p>{strip_tags($r['content']</p>
+              <div class="meta">
+                <span class="blue">{$r['username']}</span>
+                <span class="time">{date('Y-m-d',$r['addtime'])}</span>
+              </div>
+            </div>
+            {if $r['reply'] &&!$r['hidden']}
+            <div class="answer" style="margin-left:0;">
+              <div class="meta">
+                <span class="blue">管理员回复：</span>
+              </div>
+              <p>{$r['reply']} [回复时间：{date('Y-m-d',$r['replytime'])}]</p>
+            </div>
+          {/if}
+          </li>
+         {/loop}
+        </ol>
+      </div>
+      <div class="line10"></div>
+      <div class="flickr" align="right">{$reteng_page}</div>
+      <div class="line10"></div>
+      <h3 class="base_tit">发表留言<a name="Add" id="Add"></a></h3>
+      <div class="line10"></div>
+	  <form action="{$RETENG['retengcms_path']}guestbook/index.php?action=post" method="post" name="myform" id="guestbook_add">
+	  <input type="hidden" name="do_submit" value="1" />
+     <div class="form_box">
+       <dl>
+         <dt>您的姓名：</dt>
+         <dd><input id="txtUserName" name="info[username]" type="text" class="input txt" datatype="*" sucmsg=" " /></dd>
+       </dl>
+       <dl>
+         <dt>留言内容：</dt>
+         <dd><textarea id="txtContent" name="info[content]" class="input txt" datatype="*" sucmsg=" " style="width:350px;height:80px;"></textarea></dd>
+       </dl>
+       <dl>
+         <dt>验&nbsp;证&nbsp; 码：</dt>
+         <dd>
+           <input id="txtCode" name="chkcode" type="text" class="input small" datatype="*" sucmsg=" " />
+           <a href="javascript:;" onclick="ToggleCode(this, '{$RETENG['retengcms_path']}api/imcode/checkcode.php');return false;"><img src="{$RETENG['retengcms_path']}api/imcode/checkcode.php" width="80" height="22" align="absmiddle" /> 看不清楚？</a>
+           <span class="Validform_checktip"></span>
+         </dd>
+       </dl>
+       <dl>
+         <dt></dt>
+         <dd>
+         <input name="dsubmit" type="submit" value="发表留言" class="btn_submit" />
+         </dd>
+       </dl>
+     </div>
+     <div class="clear"></div>
+     </form>
+    </div>
+  </div>
+  {tlp _right}
+</div>
+<div class="clear"></div>
+{tlp footer}
+<script type="text/javascript" src="{$RETENG[tlp_path]}js/jquery.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}js/c.js"></script>
+</body>
+</html>

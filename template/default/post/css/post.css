@@ -1,0 +1,51 @@
+/*### Powered by: www.dayucms.com ###*/
+
+/*----------Reset CSS for Browsers----------*/
+body{color:#444; background:#fff; text-align:left; line-height:21px; font-size:12px; font:12px/1.5 tahoma,arial,"\5b8b\4f53",sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,b,i,p,th,td,form,fieldset,legend,input,button,textarea,blockquote,hr,pre{margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6,b,i,button,input,select,textarea{font-size:100%; font-weight:normal; font-style:normal;}
+table{border-collapse:collapse; border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal; font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+html{overflow-y:scroll;}
+input,select,button,textarea{vertical-align:middle; font-family:Arial, Helvetica, sans-serif;}
+input[type="submit"]{cursor:pointer;}
+abbr,acronym{border:none; font-variant:normal;}
+html{-webkit-text-size-adjust:none;}/* chrome minium font-size fixed */
+a{color:#444; text-decoration:none;}
+a:hover{color:#f60; text-decoration:underline;}
+a:active{blr:expression(this.onFocus=this.blur())}
+a:focus {outline:none;-moz-outline:none;}
+.clear{clear:both; font-size:1px; height:0; line-height:0;}
+.clearfix{display:inline-block;}
+.clearfix:after{content:"."; clear:both; display:block; height:0; visibility:hidden;}
+
+/*In Common Use */
+.fl{float:left;}.fr{float:right;}.mt10{margin-top:10px;}.ml8{margin-left:8px;}.fz14{font-size:14px;}.fz12{font-size:12px;}.border-t-no{border:solid 1px #D7E3ED; border-top:none;}.red{color:#f30!important;}.blue{color:#2478C5!important;}.tr{text-align:right;}.gray{color:#999!important;}
+
+.container{width:100%; height:auto; padding-top:20px; background:url(../images/repeat_x.png) 0 -356px repeat-x;}
+
+/*---栏目列表---*/
+.catlist{width:960px; overflow:hidden;}
+.catlist dt{height:26px; line-height:26px; padding-top:1px; padding-left:12px; padding-right:12px; color:#066BC7; border:solid 1px #D7E3ED; background:#E7EFFD url(../images/repeat_x.png) 0 -319px repeat-x;}
+.catlist dd{padding:15px 30px; width:898px; overflow:hidden;}
+.catlist dd .fri-links-sort{width:898px; height:25px; display:block; line-height:25px; border-bottom:dashed 1px #D7E3ED; margin-bottom:5px;}
+.catlist dd ul{width:898px; display:block; margin:0px auto; margin-bottom:20px;}
+.catlist dd li{float:left; line-height:22px; margin-right:10px; width:100px; display:inline; word-break:keep-all;}
+.catlist dd li a{color:#444}
+
+/*---发布信息---*/
+.co-post{width:960px; font-size:12px; line-height:22px}
+.co-post p{width:860px; margin:5px auto}
+.co-post th{font-size:12px; font-weight:400; text-align:right; padding:4px 2px;}
+.co-post td{text-align:left; padding:2px;}
+textarea{border:solid 1px #b3b3b3; padding:2px; font-size:12px; overflow:auto}
+.co-post .code{cursor:pointer; margin:0 5px;}
+.co-post .text-area{border:solid 1px #b3b3b3; width:400px; height:100px; overflow:auto}
+.co-post-btn{text-align:center; display:inline-block; cursor:pointer; width:70px; height:26px; line-height:22px; margin-right:10px;}
+.co-post td.pd4{padding:4px 2px;}
+.co-post td.pd10{padding:10px 2px;}
+
+

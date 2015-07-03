@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<title>{$head[title]}</title>
+<meta name="keywords" content="{$head[keywords]}" />
+<meta name="description" content="{$head[description]}" />
+<meta name="generator" content="ReTeng.Org" />
+<meta name="author" content="ReTeng.Org" />
+<meta name="copyright" content="2014 热腾网" />
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+<link rel="stylesheet" href="{$RETENG['retengcms_path']}skin/css/style.css" />
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onSelectStart="return false">
+{tlp header}
+        <div class="news_list">
+            <ul>
+	{reteng:list row="10" titlelen="50" infolen="190" ismore="1"}
+	{retengcms $reteng_page=$_DATA['pagestring'];}
+	{retengcms $pagecount=$_DATA['pagecount'];}
+                  <li>
+                    <dl>
+                        <dt><img src="{field:thumb}" /></dt>
+                        <dd>
+                            <h4><span>{date('Y年m月d日',field:updatetime)}</span><a href="{field:url}" title="{field:fulltitle}">{field:title}</a></h4>
+                            <p>{field:description}
+<a href="{field:url}">阅读全文</a></p>
+                        </dd>
+                    </dl>
+                </li>
+    {/reteng:list}
+            </ul>
+	{if $pagecount>1}
+    <div style="margin-bottom:10px">{$reteng_page}</div>
+	{/if}
+        </div>
+{tlp footer}
+    <script src="{$RETENG['retengcms_path']}skin/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="{$RETENG['retengcms_path']}skin/js/helper.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            load_news();
+        </script>
+</body>
+</html>

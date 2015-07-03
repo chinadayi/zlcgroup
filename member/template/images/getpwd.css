@@ -1,0 +1,66 @@
+/*### Powered by: www.dayucms.com ###*/
+
+/*----------Reset CSS for Browsers----------*/
+body{color:#444; background:#fff; text-align:left; line-height:21px; font-size:12px; font:12px/1.5 tahoma,arial,"\5b8b\4f53",sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,b,i,p,th,td,form,fieldset,legend,input,button,textarea,blockquote,hr,pre{margin:0; padding:0}
+h1,h2,h3,h4,h5,h6,b,i,button,input,select,textarea{font-size:100%; font-weight:normal; font-style:normal;}
+table{border-collapse:collapse; border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal; font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+html{overflow-y:scroll;}
+input,select,button,textarea{vertical-align:middle; font-family:Arial, Helvetica, sans-serif; font-size:12px}
+input[type="submit"]{cursor:pointer;}
+abbr,acronym{border:none; font-variant:normal;}
+html{-webkit-text-size-adjust:none;}/* chrome minium font-size fixed */
+a:link{color:#444; text-decoration:none;}
+a:visited{color:#444; text-decoration:none;}
+a:hover{color:#f60; text-decoration:underline;}
+a:active{blr:expression(this.onFocus=this.blur())}
+a:focus {outline:none;-moz-outline:none;}
+.clear{clear:both; font-size:1px; height:0; line-height:0;}
+.clearfix{display:inline-block;}
+.clearfix:after{content:"."; clear:both; display:block; height:0; visibility:hidden;}
+.wb{word-break:break-all; word-wrap:break-word;}
+.page-wrap{width:960px; margin:0 auto;}
+
+/*In Common Use */
+.fl{float:left;}.fr{float:right;}.mt10{margin-top:10px;}.ml8{margin-left:8px;}.fz14{font-size:14px;}.fz12{font-size:12px;}.border-t-no{border:solid 1px #D7E3ED; border-top:none;}.red{color:#f30!important;}.blue{color:#2478C5!important;}.tr{text-align:right;}.gray{color:#999!important;}
+
+/*---头部---*/
+.header-bg{height:82px; border-bottom:solid 3px #2C82CC; width:100%; background:url(../images/repeat_x.png) 0 -227px repeat-x;}
+.header{width:960px; height:82px; margin:0 auto; background:url(../images/head_bg.png) 335px 0 no-repeat; position:relative;}
+.header h1{width:219px; height:38px; position:absolute; left:0px; top:36px;}
+.header h1 strong{font-weight:normal; letter-spacing:6px; color:#999;}
+.header .h-link{color:#999; position:absolute; right:0px; top:50px;}
+.header .h-link a{margin:0 5px; color:#066BC7;}
+
+.container{width:100%; height:auto; padding-top:40px; background:url(../images/repeat_x.png) 0 -356px repeat-x;}
+
+/*---找回密码---*/
+.find-pw-page-box{padding:20px 25px;}
+.find-pw-box{width:600px;}
+.find-pw-box .find-pw-title{font-size:18px; color:#333; display:block; margin-bottom:15px; padding-bottom:3px; border-bottom:dashed 1px #CCC;}
+.find-pw{width:590px; padding:10px 5px 10px;}
+.find-pw th{font-size:14px; font-weight:400; text-align:right; padding:4px 2px;}
+.find-pw td{text-align:left; padding:5px 2px;}
+.find-pw .txt{height:22px; line-height:22px; border:solid 1px #b3b3b3; padding-left:2px;}
+.find-pw .code{cursor:pointer; margin:0 5px;}
+.find-pw-btn{text-align:center; color:#FFF!important; display:inline-block; cursor:pointer; background:url(../images/css_sprites.png) -158px -124px no-repeat; width:82px; height:23px; line-height:23px; border:none;}
+.find-pw td.pd4{padding:4px 2px;}
+.find-pw td.pd10{padding:10px 2px;}
+
+.login-btn{border:none; text-align:center; color:#3472A3!important; font-size:14px; font-weight:bold; display:inline-block; cursor:pointer; width:68px; height:29px; line-height:29px; background:#C9E3F7 url(../images/css_sprites.png) -122px -292px no-repeat;}
+
+.reg-login-tip{width:250px; padding:48px 0 0 25px;}
+.reg-login-tip .reg-login{height:250px; border-left:solid 1px #ccc; padding-left:20px;}
+.reg-login-tip .reg-login p{margin-bottom:10px; color:#666;}
+
+/*---底部---*/
+.footer{width:960px; height:90px; text-align:center; margin:10px auto 0; padding-top:10px; border-top:solid 1px #C6D8E6;}
+.footer .foot-nav{color:#999;}
+.footer .foot-nav li{display:inline; line-height:24px;}
+.footer .foot-nav a{color:#666; margin-left:3px; margin-right:5px;}
+.footer .copyright{color:#999; line-height:24px;}
+.footer .copyright a{color:#666;}

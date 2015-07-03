@@ -1,0 +1,115 @@
+<?php
+// 2012-03-08 23:23
+
+/* 
+	global.func.php 
+*/
+$baselang['operation-succss']='操作执行成功!';
+$baselang['operation-error-badpwd']='密码错误, 操作失败!';
+$baselang['more']='更多';
+$baselang['undefined']='未定义';
+$baselang['index']='首页';
+$baselang['prepage']='上一页';
+$baselang['nextpage']='下一页';
+$baselang['endpage']='末页';
+$baselang['firstpage']='首页';
+$baselang['total']='总数';
+$baselang['totalpage']='页次';
+$baselang['start']='第';
+$baselang['page']='页';
+$baselang['unkonwnbrowser']='未知浏览器';
+$baselang['reset']='重选';
+$baselang['nodata']='暂无归属地数据!';
+$baselang['wrong-phone']='';
+/* 
+	common.inc.php 
+*/
+$baselang['tourist']='游客';
+
+/* 
+	data.input.class.php 
+*/
+$baselang['max-50']='不能超过50个字符!';
+$baselang['min-3']='不能少于3个字符!';
+$baselang['err-email']='请输入正确的邮箱!';
+$baselang['err-url']='请输入正确的链接地址!';
+$baselang['err-phone']='电话格式不正确!';
+$baselang['float-0-9']='只能是0-9的数字以及小数点!';
+$baselang['err-username']='用户名由1-30位中文，数字，字母，下划线组成!';
+$baselang['err-pwd']='用户密码由3-30位数字，字母，下划线组成!';
+$baselang['integer-0-9']='只能是0-9的整数!';
+$baselang['err-a0_']='只能由数字，字母，下划线组成!';
+$baselang['err-qq']='QQ号码只能由3-15位的数字组成!';
+$baselang['err-telephone']='手机号码格式不正确!';
+$baselang['err-ip']='IP地址格式不正确!';
+
+/*
+	content.class.php
+*/
+$baselang['err-empty-title']='标题不能为空!';
+$baselang['err-repeat-title']='标题有重复!';
+$baselang['ok-title']='标题监测通过';
+$baselang['delete-password']='信息删除密码：';
+
+/*
+	form.class.php
+*/
+$baselang['err-load-fckeditor']='编辑器加载失败!';
+$baselang['your-ip']='您当前的Ip为:';
+$baselang['post-notice']='请勿发布虚假广告、黄色言论、等违法信息!';
+$baselang['download-picture']='自动读取远程图片到本地';
+$baselang['auto-description']='截取内容前255字符作为摘要';
+$baselang['auto-alt']='自动给图片加 ALT 标签';
+$baselang['get-start']='获取第';
+$baselang['get-thumb']='张图片作为标题图片';
+$baselang['dict-update']='更新词库';
+$baselang['tips-close']='关闭';
+$baselang['tips-ok']='允许';
+$baselang['tips-pass']='审核';
+$baselang['tips-unpass']='通过';
+$baselang['select-none']='请选择...';
+$baselang['browse-server']='浏览服务器';
+$baselang['select-picture']='选择图片(可多选)';
+$baselang['select-attachment']='选择附件(可多选)';
+$baselang['upload-cancel']='取消上传';
+$baselang['attachment-desc']='附件说明';
+$baselang['supported-formats']='支持的格式:';
+$baselang['mark-map']='标注地图';
+$baselang['description']='描述：';
+$baselang['value']='值：';
+$baselang['option-add']='增加一项';
+$baselang['option-delete']='删除该项';
+$baselang['page-split-no']='不分页';
+$baselang['page-split-auto']='自动分页';
+$baselang['page-split-auto-count-1']='自动分页时的每页字符数量';
+$baselang['page-split-auto-count-2']=',包含HTML代码!';
+$baselang['page-split-hand']='手动分页';
+$baselang['option-delete']='删除该项';
+/*
+	template.func.php
+*/
+$baselang['content-none']='没有了';
+
+/*
+	sms.class.php
+*/
+$baselang['sms-status-100']='短信发送成功!';
+$baselang['sms-status-101']='短信发送失败,验证失败!';
+$baselang['sms-status-102']='短信发送失败,短信不足!';
+$baselang['sms-status-103']='短信发送失败,操作失败!';
+$baselang['sms-status-104']='短信发送失败,非法字符!';
+$baselang['sms-status-105']='短信发送失败,内容过多!';
+$baselang['sms-status-106']='短信发送失败,号码过多!';
+$baselang['sms-status-107']='短信发送失败,频率过快!';
+$baselang['sms-status-108']='短信发送失败,号码内容空!';
+$baselang['sms-status-109']='短信发送失败,账号冻结!';
+$baselang['sms-status-110']='短信发送失败,禁止频繁单条发送!';
+$baselang['sms-status-111']='短信发送失败,系统暂定发送!';
+$baselang['sms-status-112']='短信发送失败,号码不正确!';
+$baselang['sms-status-120']='短信发送失败,系统升级!';
+
+/*
+	IP
+*/
+$baselang['ip_forbidden']='不允许该当前地区用户执行此操作!';
+?>

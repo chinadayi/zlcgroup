@@ -1,0 +1,19 @@
+img{border:0;}
+body{margin:0; padding:0; font:12px/1.5 tahoma,arial,"\5b8b\4f53",sans-serif;}
+a:link{color:#06c; text-decoration:none;}
+a:visited{color:#06c; text-decoration:none;}
+a:hover{color:#06c; text-decoration:underline;}
+a:active{blr:expression(this.onFocus=this.blur())}
+a:focus {
+    outline:none;
+    -moz-outline:none;
+}
+
+.window{width:450px; border:solid 1px #91B7E0; margin:60px auto 0;}
+.window .tips-title{height:27px; line-height:27px; background:#5791CB; padding:0 12px;}
+.window .tips-title strong{font-size:14px; color:#FFF; padding-left:24px; height:27px; display:block; background:url(window_icon.png) scroll 0 4px no-repeat;}
+.window .tips-box{padding:25px 20px 25px 65px; min-height:70px; height:70px; height:70px; font-size:14px;}
+.window .tips-box .tip-icon{width:36px; height:35px; background:url(win_tips.png) 0 0 no-repeat; float:left; margin-right:18px;}
+.window .tips-box .tip-cont{width:311px; float:left; padding-top:6px;}
+.window .bottom-tips{height:29px; line-height:29px; background:#E4ECF7; color:#666;}
+.window .bottom-tips .login-t{text-align:center; display:block;}

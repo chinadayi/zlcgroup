@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$head[title]} - Powered by RTCMS</title>
+<meta name="keywords" content="{$head[keywords]}" />
+<meta name="description" content="{$head[description]}" />
+<meta name="generator" content="zlcgroup.com" />
+<meta name="author" content="zlcgroup.com" />
+<meta name="copyright" content="2015 中联创" />
+<link rel="stylesheet" href="{$RETENG[tlp_path]}css/pagination.css" />
+<link media="screen" type="text/css" href="{$RETENG[tlp_path]}css/style.css" rel="stylesheet">
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}js/base.js"></script>
+</head>
+<body>
+{tlp header}
+<div class="boxwrap">
+  <div class="left710">
+    <div class="main_box">
+      <dl class="head blue">
+        <dt>{catname($catid)}</dt>
+        <dd>
+          <span>当前位置：{$reteng_postion}</span>
+        </dd>
+      </dl>
+      <div class="clear"></div>
+      <h1 class="base_tit">分类“{catname($catid)}”的内容</h1>
+      <ul class="news_list">
+	{reteng:list row="20" infolen="200" ismore="1"}
+	{retengcms $reteng_page=$_DATA['pagestring'];}
+	{retengcms $pagecount=$_DATA['pagecount'];}
+        <li>
+          <h2><a href="{field:url}" title="{field:fulltitle}">{sub_string(field:title,80,'...')}</a></h2>
+          <div class="info">
+            <span class="time">{date('Y年m月d日',field:updatetime)}</span>
+            <span class="view">{field:clicks}次浏览</span>
+			<span class="comm">【<a href="{caturl($catid)}" title="分类：{catname($catid)}">{catname($catid)}</a>】</span>
+          </div>
+          <div class="note">{field:description} ... </div>
+        </li>
+        {/reteng:list}
+      </ul>
+      <div class="line20"></div>{if $pagecount>1}
+      <div class="page_list" align="right">{$reteng_page}</div>{/if}
+    </div>
+  </div>
+  <div class="left264">
+    <div class="sidebar">
+      <div class="clear"></div>
+      <h3>推荐资讯</h3>
+      <ul class="newsRedlist">
+	  {reteng:content catid="$catid" posid="3" row="10" limit="0" withthumb="0"}
+        <li><a title="{field:title}" href="{field:url}">{sub_string(field:title,36)}</a></li>
+       {/reteng:content}
+      </ul>
+      <h3>图片资讯</h3>
+      <div class="focus_list">
+        <ul>
+          {reteng:content  row="9" withthumb="1"}
+          <li>
+            <a title="{field:title}" href="{field:url}">
+              <img src="{field:thumb}" width="100" height="100" alt="{field:title}" />
+              <span>{sub_string(field:title,8,'...')}</span>
+            </a>
+          </li>
+          {/reteng:content}
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <h3>人气排行</h3>
+      <ul class="rank_list">
+        {reteng:content  catid="$catid" row="10" titlelen="38" orderby="clicks DESC" ismore="0" infolen="100"}
+		{if field:autoindex<2}
+		<li class="active">
+		<span>{date('Y-m-d',field:updatetime)}</span>
+          <i class="num">1</i><a href="{-:$item['a_url']-}">{sub_string(field:title,26,'...')}</a>
+		</li>
+		{else}
+		<li>
+		<span>{date('Y-m-d',field:updatetime)}</span>
+          <i class="num">{field:autoindex}</i><a href="{-:$item['a_url']-}">{sub_string(field:title,26,'...')}</a>
+		</li>
+		{/if}
+        {/reteng:content}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+{tlp footer}
+</body>
+</html>

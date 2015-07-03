@@ -1,0 +1,14 @@
+# robots.txt for RTCMS
+# 2014-10-21
+User-agent: *
+Disallow:/admin.php
+Disallow:/admin
+Disallow:/data
+Disallow:/template
+Disallow:/api
+Disallow:/guestbook
+Disallow:/install
+Disallow:/member
+Disallow:/pay
+Disallow:/search
+Disallow:/uploads

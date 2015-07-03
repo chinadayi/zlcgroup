@@ -1,0 +1,19 @@
+<script type="text/javascript" src="lhgcore.min.js"></script> 
+<script type="text/javascript" src="lhgcalendar.min.js"></script>
+<script type="text/javascript">
+function opcal( format )
+{
+    J.calendar.Show({ format: format || "yyyy-MM-dd HH:mm:ss",btnBar:true });
+}
+</script>
+
+<style type="text/css">
+<!--
+.pre{font-family:"Courier New",Courier,monospace;}
+.runcode{border:1px solid #ddd;background:url(images/iconDate.gif) center right no-repeat #fff;cursor:pointer;font:12px tahoma,arial;height:21px;width:150px; line-height:21px; padding-left:4px; height:21px; margin:0px; padding:0px; padding-left:2px}
+-->
+</style>
+<div class="pre">    
+<input class="runcode" onclick="opcal('yyyy-MM-dd HH:mm:ss');" value=""/>
+</div>
+

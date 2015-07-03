@@ -1,0 +1,31 @@
+        <div class="guding">
+        <div class="head_bg">
+            <div class=head>
+                <div class="logo">
+                    <h1><a href="/">{$RETENG['site_name']}</a></h1>
+                </div>
+                <div class="phone">
+                    咨询电话<br />
+                    {$RETENG['telphone_one']}<br />
+                    {$RETENG['telphone_two']}
+                </div>
+                <div class="nav">
+                    <ul>
+					    <li><a href="/">网站首页</a></li>
+					 {reteng:category type="top" nav="2" row="8"}
+                        <li><a href="{field:url}">{field:catname}</a></li>
+					 {/reteng:category}
+					 <li style="background:none;"><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+<script src="{$RETENG['retengcms_path']}skin/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="{$RETENG['retengcms_path']}skin/js/helper.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var fileName = getUrl(),that;
+            $(function() {
+                change();
+            });
+        </script>

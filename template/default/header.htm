@@ -1,0 +1,20 @@
+<div class="header">
+  <div class="header_inner">
+    <h1 class="logo">
+      <a title="{$RETENG['site_name']}" href="{$RETENG['site_url']}">{$RETENG['site_name']}</a>
+    </h1>
+    <ul class="nav">
+      <li><a href="/">首页</a></li>
+	  {reteng:category type="top" nav="2" row="8"}
+	  <li><a href="{field:url}">{field:catname}</a></li>
+	  {/reteng:category}
+    </ul>
+    <div class="search">
+	<form action="/search/index.php" method="get" name="myform">
+	<input type="hidden" name="modelid" id="modelid" value="all" />
+	 <input id="keywords" name="k" class="input" type="text" x-webkit-speech="" autofocus="" placeholder="输入回车搜索" onkeydown="if(event.keyCode==13){SiteSearch('/search/index.php', '#keywords');};" />
+      <input class="submit" type="submit" value="搜索" onclick="SiteSearch('/search/index.php', '#keyword');" />
+	  </form> 
+    </div>
+  </div>
+</div>

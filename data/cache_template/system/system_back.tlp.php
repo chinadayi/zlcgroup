@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<link href="<?php echo $RETENG['retengcms_path'];?>template/system/images/style.css" type="text/css" rel="stylesheet"/>
+<script src="<?php echo $RETENG['retengcms_path'];?>images/js/jquery.min.js"></script>
+<script src="<?php echo $RETENG['retengcms_path'];?>images/js/system.js"></script>
+<title><?php echo $msg;?>-<?php echo $RETENG['site_name'];?></title>
+</head>
+
+<body>
+<div class="window">
+  <div class="tips-title"><strong>提示信息</strong></div>
+  <div class="tips-box">
+    <div class="tip-icon">&nbsp;</div>
+    <div class="tip-cont"><?php echo $msg;?></div>
+  </div>
+  <div class="bottom-tips"><span class="login-t"><a href="<?php echo $url;?>">如果您的浏览器没有自动跳转，请点击这里</a></span></div>
+</div>
+</body>
+</html>
+

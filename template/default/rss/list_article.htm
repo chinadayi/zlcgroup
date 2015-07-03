@@ -1,0 +1,20 @@
+{retengecho("<?xml version=\"1.0\" encoding=\"gb2312\"?>")}
+{retengecho("<?xml-stylesheet type=\"text/css\" href=\"/template/default/rss/css.css\"?>")}
+<rss version="2.0">
+	<channel>
+		<title>{$reteng_catname}</title>
+		<link><![CDATA[{$RETENG['site_url']}{$reteng_url}]]></link>
+		<language>zh_CN</language>
+		<copyright>Copyright {date("Y")} by {$RETENG['site_url']}. all rights reserved</copyright>
+		<description>{$head[description]}</description>
+{reteng:content row="32" ismore="1"}
+			<item>
+				<title><![CDATA[ {field:title} ]]></title>
+				<link><![CDATA[{$RETENG['site_url']}{field:url}]]></link>
+				<guid><![CDATA[{$RETENG['site_url']}{field:url}]]></guid>
+				<pubDate>{date('Y-m-d h:m:s',field:inputtime)}</pubDate>
+				<description>{sub_string(strip_tags(field:content),300)}</description>
+			</item>
+{/reteng:content}
+	</channel>
+</rss>

@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RTCMS模板调用标签</title>
+<title>模板标签-热腾CMS（RTCMS）</title>
+<meta name="keywords" content="热腾CMS,RTCMS,热腾CMS标签,RTCMS标签,模板标签" />
+<meta name="description" content="热腾CMS(RTCMS)模板制作标签。" />
+<meta name="generator" content="ReTeng.Org" />
+<meta name="author" content="ReTeng.Org" />
+<meta name="copyright" content="2014 ReTeng.Org" />
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+</head>
+<body>
+<p><strong>全局变量</strong></p>
+<table width="800" border="1" cellspacing="0">
+				<tr>
+					<td width="151">名称</td>
+					<td width="263">用法</td>
+					<td width="386">备注</td>
+				</tr>
+				<tr>
+					<td>网站名称</td>
+					<td>{$RETENG['site_name']}</td>
+					<td>如：热腾网</td>
+				</tr>
+				<tr>
+					<td>网站地址</td>
+					<td>{$RETENG['site_url']} </td>
+					<td>如：http://www.reteng.org</td>
+				</tr>
+				<tr>
+				  <td>网站路径</td>
+				  <td>{$RETENG['retengcms_path']} </td>
+				  <td>如：/  或 /retengcms/</td>
+  </tr>
+				<tr>
+					<td>模板名称</td>
+					<td>{$RETENG['tlp_name']}</td>
+					<td>网站模板定义的名称</td>
+				</tr>
+				<tr>
+					<td>模板路径</td>
+					<td>{$RETENG['tlp_path']} </td>
+					<td>如：/template/模板文件夹名/</td>
+				</tr>
+				<tr>
+					<td>网站备案号</td>
+					<td>{$RETENG['icpno']}</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>网站版权</td>
+					<td>{$RETENG['copyright']}</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>网站seo标题</td>
+					<td>{head['title']} </td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>网站关键字</td>
+					<td>{$head[keywords]}</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>网站描述</td>
+					<td>{$head[description]}</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+				  <td>全部自定义标签</td>
+				  <td>{$RETENG['变量名称']}</td>
+				  <td>在后台&quot;基本配置&quot;-&quot;添加变量&quot;中自定义</td>
+  </tr>
+</table>
+<p><strong>栏目列表调用</strong></p>
+<p>功能说明：
+获取当前频道列表。</p>
+<p>适用范围：
+全局使用。</p>
+<p>基本语法：</p>
+<blockquote>
+    <p>{reteng:category type=&quot;top&quot; nav=&quot;2&quot; row=&quot;8&quot;}<br>
+      &lt;a href=&quot;{field:url}&quot;&gt;{field:catname}&lt;/a&gt;<br>
+    {/reteng:category}</p>
+    <p><em>带有样式的导航标签</em>：<br>
+      <em>&lt;a href=&quot;/&quot;{if !isset($id)} class=&quot;a&quot;{/if}&gt;首页&lt;/a&gt;<br>
+      {reteng:category type=&quot;top&quot; nav=&quot;2&quot; row=&quot;8&quot;}<br>
+      &lt;a href=&quot;{field:url}&quot;{if $catid==$id} class=&quot;a&quot;{/if}&gt;{field:catname}&lt;/a&gt;<br>
+    {/reteng:category}</em></p>
+</blockquote>
+<p>当前子栏目调取：</p>
+<blockquote>
+    <p>{reteng:category parentid=&quot;field:id&quot; row=&quot;10&quot; mod=&quot;1,2,4&quot;  type=&quot;son&quot;}<br>
+    &lt;a href=&quot;{field:url}&quot;&gt;{field:catname}&lt;/a&gt;<br>
+{/reteng:category}</p>
+</blockquote>
+<p>参数说明：</p>
+<table width="800" border="1" cellspacing="0">
+			<tr>
+				<td width="149">参数</td>
+				<td width="681">说明</td>
+			</tr>
+			<tr>
+				<td>nav=&quot;2&quot;</td>
+				<td>导航分组（1.顶部导航、2.主导航、3.底部导航）分组根据后台行设置</td>
+			</tr>
+			<tr>
+				<td>row=&quot;8&quot;</td>
+				<td>获取频道条数</td>
+			</tr>
+			<tr>
+				<td>type=&quot;top&quot;</td>
+				<td>调用类型 top 顶级分类，self同级分类，son子级分类</td>
+			</tr>
+			<tr>
+			  <td>mod=&quot;1,2,4&quot;</td>
+			  <td>模型类型，1文字，2单页，3，系统，比如会员等，4外部连接</td>
+  </tr>
+			<tr>
+			  <td>parentid=&quot;0&quot;</td>
+			  <td>父级栏目id</td>
+  </tr>
+			<tr>
+			  <td>offset=&quot;0&quot;</td>
+			  <td>从第几条开始调用</td>
+  </tr>
+			<tr>
+			  <td>catid=&quot;0&quot;</td>
+			  <td>调用栏目ID,可选，一般内页做相关分类的时候需要用到</td>
+  </tr>
+			<tr>
+			  <td>id=&quot;0&quot;</td>
+			  <td>调用id,可选</td>
+  </tr>
+</table>
+<p><strong>栏目、单页标签</strong>：</p>
+<blockquote>
+    <p>栏目、单页标签函数：category<br>
+    应用格式：{reteng:category}html模版{/reteng:category}</p>
+</blockquote>
+<p>可用字段：</p>
+<table width="800" border="1" cellspacing="0">
+			<tr>
+				<td width="204">调用字段</td>
+				<td width="719">字段说明</td>
+			</tr>
+			<tr>
+				<td>field:id</td>
+				<td>栏目id</td>
+			</tr>
+			<tr>
+				<td>field:modelid</td>
+				<td>模型ID</td>
+			</tr>
+			<tr>
+				<td>field:parentid </td>
+				<td>父级ID</td>
+			</tr>
+			<tr>
+			  <td>field:type </td>
+			  <td>栏目类型</td>
+  </tr>
+			<tr>
+			  <td>field:catname</td>
+			  <td>栏目名称</td>
+  </tr>
+			<tr>
+			  <td>field:domain</td>
+			  <td>栏目绑定域名</td>
+  </tr>
+			<tr>
+			  <td>field:catdir</td>
+			  <td>栏目目录</td>
+  </tr>
+			<tr>
+			  <td>field:url</td>
+			  <td>栏目连接地址</td>
+  </tr>
+			<tr>
+			  <td>field:setting</td>
+			  <td><p>栏目设置为数组类型，调用的时候，需要转换{retengcms:$rs=string2array(field:setting)},<br/>然后可以调用设置例如：{$rs['meta_title']} seo设置，{$rs['meta_keywords']}seo关键词，{$rs['meta_description']}seo描述</p></td>
+  </tr>
+			<tr>
+			  <td>field:siteid</td>
+			  <td>站点id</td>
+  </tr>
+			<tr>
+			  <td>field:content</td>
+			  <td>栏目内容，如果为单页的时候需要</td>
+  </tr>
+			<tr>
+			  <td>field:navtype</td>
+			  <td>导航分组</td>
+  </tr>
+			<tr>
+			  <td>field:_自定义名称</td>
+			  <td>其他自定义字段</td>
+  </tr>
+</table>
+<p><strong>内容列表调取方法</strong>：</p>
+<blockquote>
+    <p>{reteng:content row='3' limit=&quot;0&quot; withthumb=&quot;1&quot; catid=&quot;$catid&quot; infolen=&quot;150&quot;}<br>
+      &lt;a title=&quot;{field:title}&quot; href=&quot;{field:url}&quot;&gt;&lt;img width=&quot;110&quot; height=&quot;110&quot; src=&quot;{field:thumb}&quot; alt=&quot;{field:title}&quot; /&gt;&lt;/a&gt;<br>
+      &lt;a href=&quot;{field:url}&quot; title=&quot;{field:title}&quot;&gt;{sub_string(field:title,46)}&lt;/a&gt;<br>
+      &lt;p&gt;{sub_string(field:description,100,'...')}&lt;/p&gt;<br>
+    {/reteng:content}</p>
+    <p>注：</p>
+    <p>limit=&quot;0&quot;&nbsp;&nbsp; 起始,结束 表示限定的记录范围（如：limit='1,2'）<br>
+      withthumb=&quot;1&quot;&nbsp;&nbsp;图文内容调取（如：1.为调取带有图片的文章，0.为调取无图片的文章）<br>
+      infolen=&quot;150&quot;&nbsp;&nbsp;截取描述字数<br>
+    titlelen=&quot;10&quot;&nbsp;&nbsp;截取标题显示字数</p>
+</blockquote>
+<p><strong>热门文章</strong>：</p>
+<blockquote>
+    <p>{reteng:content  row=&quot;1&quot; titlelen=&quot;14&quot; withthumb=1 orderby=&quot;updatetime DESC&quot; ismore=&quot;0&quot; infolen=150}<br>
+      &lt;a href=&quot;{field:url}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;{field:thumb}&quot;/&gt;&lt;/a&gt;<br>
+      &lt;p&gt;&lt;a href=&quot;{field:url}&quot; target=&quot;_blank&quot; title=&quot;{field:fulltitle}&quot;&gt;{field:title}&lt;/a&gt;&lt;/p&gt;<br>
+      &lt;p class=&quot;text&quot;&gt;{field:description}&lt;/p&gt;<br>
+      {/reteng:content}<br>
+      热门文章<br>
+      {reteng:content  row=&quot;9&quot; titlelen=&quot;40&quot; orderby=&quot;clicks DESC&quot; ismore=&quot;0&quot;}<br>
+      &lt;a href=&quot;{field:url}&quot; target=&quot;_blank&quot; title=&quot;{field:fulltitle}&quot;&gt;{field:title}&lt;/a&gt;<br>
+    {/reteng:content}</p>
+</blockquote>
+<p><strong>热门标签</strong>：</p>
+<blockquote>
+    <p>{if md_installed('tags')}<br>
+      &lt;h3&gt;热门标签&lt;/h3&gt;<br>
+      {table:tagindex row=20}&lt;a href=&quot;/tags/?tag={field:tag}&quot;&gt;{field:tag}&lt;/a&gt; {/table:tagindex}<br>
+    {/if}</p>
+</blockquote>
+<p><strong>相关栏目</strong>：</p>
+<blockquote>
+    <p>{if ishaschildren($catid)}<br>
+      &lt;h3&gt;相关栏目&lt;/h3&gt;<br>
+      {reteng:category parentid=&quot;$pid&quot; type=&quot;son&quot;}<br>
+      &lt;a href=&quot;{field:url}&quot; target=&quot;_blank&quot;&gt;{field:catname}&lt;/a&gt;<br>
+      {/reteng:category} <br>
+    {/if}</p>
+</blockquote>
+<p><strong>推荐文章</strong>：</p>
+<blockquote>
+    <p>{reteng:content catid=&quot;$catid&quot; posid=&quot;3&quot; row=&quot;10&quot; limit=&quot;0&quot; withthumb=&quot;0&quot;}<br>
+      &lt;a title=&quot;{field:title}&quot; href=&quot;{field:url}&quot;&gt;{sub_string(field:title,38,'...')}&lt;/a&gt;<br>
+    {/reteng:content}</p>
+  <p>注：posid=&quot;3&quot;推荐显示的页面</p>
+</blockquote>
+<p><strong>最新评论</strong>：</p>
+<blockquote>
+    <p>{reteng:comment contentid=&quot;0&quot; row=&quot;5&quot; page=&quot;0&quot;}<br>
+      &lt;a href=&quot;{$RETENG[retengcms_path]}comment/index.php?contentid={field:contentid}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;{field:userface}&quot;&gt;&lt;/a&gt;<br>
+      &lt;a href=&quot;{$RETENG[retengcms_path]}comment/index.php?contentid={field:contentid}&quot; target=&quot;_blank&quot;&gt;{field:username}&lt;/a&gt;<br>
+      {field:content}<br>
+    {/reteng:comment}</p>
+</blockquote>
+<p><strong>相关文章</strong>：</p>
+<blockquote>
+    <p>{reteng:content row=&quot;10&quot; keyword=&quot;$keywords&quot;}<br>
+      &lt;a title=&quot;{field:title}&quot; href=&quot;{field:url}&quot;&gt;{field:title}&lt;/a&gt;&lt;span&gt;({date('Y-m-d',field:updatetime)})&lt;/span&gt;<br>
+    {/reteng:content}</p>
+</blockquote>
+<p><strong>单页内容截取调用</strong>：</p>
+<blockquote>
+    <p>{reteng:category catid=&quot;1&quot;}{sub_string(strip_tags(field:content),280,'...')}{/reteng:category}</p>
+  <p>注：catid=&quot;1&quot;&nbsp;单页ID</p>
+</blockquote>
+<p><strong>内容页面：上一篇；下一篇文章</strong>：</p>
+<blockquote>
+    <p>上一篇：{getpre($id,$catid,60)}<br>下一篇：{getnext($id,$catid,60)}</p>
+</blockquote>
+<p><strong>预设函数介绍：</strong></p>
+<table width="800" border="1" cellspacing="0">
+			<tr>
+				<td width="170">调用标签</td>
+				<td width="620">标签作用说明</td>
+			</tr>
+			<tr>
+				<td>{catname($catid)}</td>
+				<td>获取栏目名称</td>
+			</tr>
+			<tr>
+				<td>{caturl($catid)}</td>
+				<td>获取栏目地址</td>
+			</tr>
+			<tr>
+				<td>{catimage($catid)}</td>
+				<td> 获取栏目封面图片地址</td>
+			</tr>
+			<tr>
+			  <td>get_pos($catid=0,$separator='')</td>
+			  <td>获取当前位置$catid栏目id,$separator为分隔字符</td>
+  </tr>
+			<tr>
+			  <td>{strtojpg($str,$width='100',$height='24')}</td>
+			  <td>将文本转换成图片</td>
+  </tr>
+			<tr>
+			  <td>{get_images($str)}</td>
+			  <td>获取一段文本中的所有图片</td>
+  </tr>
+			<tr>
+			  <td>{getcururl()} </td>
+			  <td>获取当前地址</td>
+  </tr>
+			<tr>
+			  <td>{sub_string($string, $length, $dot='')}</td>
+			  <td>$dot='')}         字符截取函数，$string是要截取的字符串，$length是截取长度数</td>
+  </tr>
+			<tr>
+			  <td>{string2array($str)}</td>
+			  <td>字符串转换成数组</td>
+  </tr>
+			<tr>
+			  <td>{explorer_version()}</td>
+			  <td><p>获得浏览器的类型</p></td>
+  </tr>
+			<tr>
+			  <td>{getparentid($catid)}</td>
+			  <td>获取一个栏目的父级id,如果catid为顶级栏目，那么返回的是0</td>
+  </tr>
+			<tr>
+			  <td>{isfinalcatid($catid)}</td>
+			  <td>判断一个栏目是否为最终栏目</td>
+  </tr>
+			<tr>
+			  <td>{ishaschildren($catid)}</td>
+			  <td>判断一个栏目是否有子栏目</td>
+  </tr>
+			<tr>
+			  <td>{gettopparentid($catid)} </td>
+			  <td>获取一个栏目的顶级栏目id</td>
+  </tr>
+</table>
+<p><strong>普通变量：</strong></p>
+<table width="800" border="1" cellspacing="0">
+			<tr>
+				<td width="149">变量</td>
+				<td width="681">说明</td>
+  </tr>
+			<tr>
+				<td>{$catid}</td>
+				<td>栏目ID  这个实用于 内页（列表，文字展示，单页，频道首页）</td>
+			</tr>
+			<tr>
+				<td>{$id}</td>
+				<td>ID编号，如果在列表页中调用则是，栏目id,如果在文章页中则是文章id</td>
+			</tr>
+			<tr>
+				<td>{$page}</td>
+				<td>当前分页</td>
+			</tr>
+			<tr>
+			  <td>{$reteng_postion}</td>
+			  <td>当前位置</td>
+  </tr>
+			<tr>
+			  <td>{$reteng_catname} </td>
+			  <td>当前栏目名称，不推荐使用一般使用{catname($catid)}</td>
+  </tr>
+			<tr>
+			  <td>{$no}</td>
+			  <td>retengcms循环计数器，实用：category,content,loop标签中，从0开始，如果需要从1开始，那么{retengcms $pno=$no+1;}</td>
+  </tr>
+</table>
+<p><strong>模板嵌入调用</strong>：</p>
+<blockquote>
+    <p>retengcms常用标签</p>
+    <p>{tlp 文件名}  引用一个文件 <br />
+      {retengcms }  是前端转换成php运行</p>
+    <p>实际应用：</p>
+    <p>{tlp head} 包含 头部文件<br />
+      {retengcms $aa;} 定义一个$aa的变量</p>
+</blockquote>
+<p><strong>其他常用标签</strong>：</p>
+<blockquote>
+    <p>{catname(3)} &nbsp;&nbsp;调取栏目ID为3的栏目名<br />
+      {catname($catid)} &nbsp;&nbsp;调取当前栏目名<br />
+    {field:autoindex} &nbsp;&nbsp;循环计数</p>
+</blockquote>
+<p></p>
+<p><strong>更多标签调用可参考网站后台相关模型。</strong></p>
+</body>
+<div style="display:none";><script src="http://s19.cnzz.com/stat.php?id=1252931341&web_id=1252931341" language="JavaScript"></script></div>
+</html>

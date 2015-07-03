@@ -1,0 +1,105 @@
+/*### Powered by: www.dayucms.com ###*/
+.p-left{width:712px; overflow:hidden;}
+.p-right{width:240px; overflow:hidden;}
+
+/*----------Reset CSS for Browsers----------*/
+body{color:#444; background:#fff; text-align:left; line-height:21px; font-size:12px; font:12px/1.5 tahoma,arial,"\5b8b\4f53",sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,b,i,p,th,td,form,fieldset,legend,input,button,textarea,blockquote,hr,pre{margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6,b,i,button,input,select,textarea{font-size:100%; font-weight:normal; font-style:normal;}
+table{border-collapse:collapse; border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal; font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+html{overflow-y:scroll;}
+input,select,button,textarea{vertical-align:middle; font-family:Arial, Helvetica, sans-serif;}
+input[type="submit"]{cursor:pointer;}
+abbr,acronym{border:none; font-variant:normal;}
+html{-webkit-text-size-adjust:none;}/* chrome minium font-size fixed */
+a:link{color:#444; text-decoration:none;}
+a:visited{color:#444; text-decoration:none;}
+a:hover{color:#f60; text-decoration:underline;}
+a:active{blr:expression(this.onFocus=this.blur())}
+a:focus {outline:none;-moz-outline:none;}
+.clear{clear:both; font-size:1px; height:0; line-height:0;}
+.clearfix{display:inline-block;}
+.clearfix:after{content:"."; clear:both; display:block; height:0; visibility:hidden;}
+.wb{word-break:break-all; word-wrap:break-word;}
+.page-wrap{width:960px; margin:0 auto;}
+
+/*In Common Use */
+.fl{float:left;}.fr{float:right;}.mt10{margin-top:10px;}.ml8{margin-left:8px;}.fz14{font-size:14px;}.fz12{font-size:12px;}.border-t-no{border:solid 1px #D7E3ED; border-top:none;}.red{color:#f30!important;}.blue{color:#2478C5!important;}.tr{text-align:right;}.gray{color:#999!important;}
+
+/*---头部---*/
+.header-bg{height:82px; border-bottom:solid 3px #2C82CC; width:100%; background:url(../images/repeat_x.png) 0 -227px repeat-x;}
+.header{width:960px; height:82px; margin:0 auto; background:url(../images/head_bg.png) 335px 0 no-repeat; position:relative;}
+.header h1{width:219px; height:38px; position:absolute; left:0px; top:16px;}
+.header h1 strong{font-weight:normal; letter-spacing:6px; color:#999;}
+.header .h-link{color:#999; position:absolute; right:0px; top:54px;}
+.header .h-link a{margin:0 5px; color:#066BC7;}
+
+.container{width:100%; height:auto; padding-top:40px; background:url(../images/repeat_x.png) 0 -356px repeat-x;}
+
+/*评论*/
+.fill-remark{border:solid 1px #D7E3ED; width:710px; overflow:hidden;}
+.fill-remark .fr-title{padding:1px 0 0 24px; height:28px; line-height:28px; padding-top:1px; color:#066BC7;}
+.fill-remark .remark-box{padding:5px 24px 10px; width:662px;}
+.fill-remark .remark-box .gray{color:#888;}
+.fill-remark td{padding:5px 2px;}
+.fill-remark td textarea{ overflow:auto; padding:2px}
+.fill-remark .txt{ height:18px; line-height:18px; padding:1px 0 0 1px; border:solid 1px #a3b6d3;}
+.fill-remark .remark-box .txt-area-box{width:420px; height:140px; overflow:hidden;}
+.fill-remark .remark-box .txt-area-box .txt-area{border:solid 1px #a3b6d3; width:410px; height:118px;}
+.fill-remark .remark-box .face-mood-box{width:210px; height:140px; padding:0 0 0 15px; overflow:hidden;}
+.fill-remark .remark-box .face-mood-box li{float:left; height:30px; margin-right:8px;}
+.fill-remark .remark-box .face-mood-box li input,.fill-remark .remark-box .face-mood-box li img{margin-right:4px; vertical-align:middle;}
+.btn-o2,.btn-o4{border:none; text-align:center; color:#fff!important; display:inline-block; cursor:pointer; height:23px; line-height:23px; background: url(../images/css_sprites.png) no-repeat;}
+.btn-o2{background-position:-90px -124px; width:58px;}
+.btn-o4{background-position:-158px -124px; width:82px;}
+
+/*---评论详细---*/
+.remark-list{padding:15px 30px; width:650px; border:solid 1px #C9D9E6;}
+.remark-list .rel-title{border-bottom:solid 1px #dadada; padding-bottom:8px;}
+.remark-list .rel-title h1{font-size:22px; color:#333; text-align:center; line-height:28px; padding:10px 0 0; font-weight:bold;}
+.comment .hd{height:34px; line-height:34px; padding:0 10px; border-bottom:solid 1px #e5eef8;}
+.comment .hd strong{margin:0 2px;}
+.comment .hd em{color:#c62100; margin:0 2px;}
+.citation{background:#FFFEF5; border:solid 1px #D1D5DB; padding:8px;}
+.citation-hd{height:24px; line-height:24px; padding-right:16px;}
+.citation-hd .citation-name{float:left; color:#2478C5}
+.citation-hd .citation-name a{color:#2478C5; margin-left:5px;}
+.citation-hd .citation-num{color:#666; float:right;}
+.citation-bd{font-size:14px}
+.btn-comment{margin:-46px 0 20px 0;}
+.floor-box{padding:0 10px;}
+.floor-box .floor-hd{line-height:26px; color:#666; padding:5px 0;}
+.floor-box .floor-hd .name{color:#2478C5; margin-right:4px;}
+.floor-box .floor-hd .date{float:right; width:165px; text-align:right;}
+.floor-box .floor-bd p{font-size:14px; padding:5px 10px;}
+.floor-box .floor-bd{padding:10px 0; border-bottom:solid 1px #e5eef8;}
+.floor-box .floor-bd .choices{text-align:right;}
+.floor-box .floor-bd .choices a{color:#2478C5; margin:0 0 0 10px; font-size:12px;}
+.floor-box .floor-bd .choices em{color:#ba2636; font-size:12px;}
+
+/*---热点排行---*/\
+.hotnews{width:240px;}
+.hotnews dt{height:28px; line-height:28px; padding-top:1px; padding-left:12px; color:#066BC7; background:#DAE5FB url(../images/css_sprites.png) 0 -85px no-repeat;}
+.hotnews dd{padding:8px 12px;}
+.hotnews dd li{height:22px; line-height:22px; padding-left:10px; background:url(../images/icon_dot.gif) 0 9px no-repeat; width:200px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+/*---推荐内容---*/
+.sidebar{width:240px; overflow:hidden;}
+.sidebar dt{height:28px; line-height:28px; padding-top:1px; padding-left:12px; color:#066BC7; background:#DAE5FB url(../images/css_sprites.png) 0 -85px no-repeat;}
+.recommend dd{padding-left:12px; padding-right:12px; padding-bottom:8px;}
+.recommend dd li{padding-top:8px; width:210px; overflow:hidden;}
+.recommend dd li strong{width:200px; font-weight:normal; padding-left:10px; background:url(../images/icon_dot.gif) 0 6px no-repeat; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.recommend dd li strong a{color:#066BC7!important;}
+.recommend dd li p{color:#888; height:33px; line-height:17px; overflow:hidden;}
+
+/*---底部---*/
+.footer{width:960px; height:90px; text-align:center; margin:10px auto 0; padding-top:10px; border-top:solid 1px #C6D8E6;}
+.footer .foot-nav{color:#999;}
+.footer .foot-nav li{display:inline; line-height:24px;}
+.footer .foot-nav a{color:#666; margin-left:3px; margin-right:5px;}
+.footer .copyright{color:#999; line-height:24px;}
+.footer .copyright a{color:#666;}

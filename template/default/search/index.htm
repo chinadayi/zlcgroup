@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$head['title']}</title>
+<meta name="keywords" content="{$head[keywords]}" />
+<meta name="description" content="{$head[description]}" />
+<link rel="stylesheet" href="{config.webpath}css/pagination.css" />
+<base href="{$RETENG['site_url']}" />
+<meta name="generator" content="ReTeng.Org" />
+<meta name="author" content="ReTeng.Org" />
+<meta name="copyright" content="2014 热腾网" />
+<link media="screen" type="text/css" href="{$RETENG[tlp_path]}css/style.css" rel="stylesheet">
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}js/base.js"></script>
+</head>
+<body>
+{tlp header}
+<div class="boxwrap">
+  <div class="main_box">
+
+    <h1 class="main_tit">
+      站内搜索<strong>Search</strong>
+      <i>搜索关健字： <b class="blue">{stripslashes($k)}</b> ，共有<b class="red">{if $data} {$totalnum}{else}0{/if}</b> 条记录</i>
+    </h1>
+    <div class="line20"></div>
+    <ul class="search_list">
+      {loop $data $r}
+      {if $r['thumb']}
+      <li style=" height:160px">
+            <div style="float:left; width:18%"><a href="{$r['url']}" title="{$r['title']}" target="_blank"><img  style="width: 152px;height: 152px;" src="{$r['thumb']}" alt="{$r['title']}"></a></div>
+            <div style="float:left; width:75%; margin-left:20px">
+             <p><a target="_blank" href="{dr[link_url]}">{$r['title']}</a><span>( {date('Y-m-d',$r['updatetime'])} )</span></p>
+             <p>{$r['description']}</p>
+            </div>
+          </li>
+     {else}
+        <li>
+            <a target="_blank" href="{$r['url']}">{$r['title']}</a><span>( {date('Y-m-d',$r['updatetime'])} )</span>
+            <p>{$r['description']}</p>
+        </li>
+      {/if}
+
+      {/loop}
+    </ul>
+    <div class="clear"></div>
+    <div class="flickr">{$reteng_page}</div>
+  </div>
+</div>
+<div class="clear"></div>
+{tlp footer}
+</body>
+</html>

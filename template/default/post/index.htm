@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<base href="{$RETENG['site_url']}" />
+<script language="javascript" src="images/js/jquery.min.js" type="text/javascript"></script>
+<script language="javascript" src="images/js/css.js" type="text/javascript"></script>
+<script language="javascript" src="member/api/login.js.php"></script>
+<script src="images/js/check.func.js"></script>
+<link href="template/default/css/base.css" rel="stylesheet" type="text/css">
+<link href="template/default/css/public.css" rel="stylesheet" type="text/css">
+<link href="template/default/post/css/post.css" rel="stylesheet" type="text/css">
+<title>在线投稿-{$RETENG['site_name']}</title>
+</head>
+<body>
+{tlp header}
+<div class="container">
+  <div class="page-wrap">
+    <div class="catlist">
+      <dl>
+        <dt><strong class="fz14 fl">在线投稿</strong></dt>
+        <dd class="border-t-no">
+		  {reteng:category parentid="0" row="100" mod="1" type="top"}
+		  {if field:ispost}
+          <strong class="fri-links-sort fz14">{field:catname}</strong>
+          <ul>
+            {reteng:category parentid="$catid" row="100" mod="1" type="son"}
+			{if field:ispost}
+			<li><a href="post/index.php?catid={field:id}">{field:catname}</a></li>
+			{/if}
+			{/reteng:category}
+            <div class="clear"></div>
+          </ul>
+		  {/if}
+          {/reteng:category}
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+{tlp footer}
+</body>
+</html>

@@ -1,0 +1,261 @@
+<?php
+return array(
+/*
+	共用部分
+*/
+			'FILE_NOFIND'=>'程序文件不完整!请检查或者重新上传程序!',
+			'RETURN_SUCEESS'=>'操作成功执行!',
+			'RETURN_ERROR'=>'操作失败!',
+			'RETURN_TIPS'=>'操作提示',
+			'RETURN_NOPRI'=>'操作权限不足!',
+			'RETURN_NOSELECT'=>'请选择需要操作的项目!',
+			'RETURN_SYSTEM'=>'禁止对系统自带项目进行此项操作!',
+			'READONLY_DATA'=>'提示 : 您没有该操作的操作权限 !<br /><br />建议检查data目录是否有写权限!',
+			'CHECKCODE_ERR'=>'验证码输入不正确!',
+			'HELLO'=>'你好',
+			'SUBMIT_CONFIG_SAVE'=>'保存配置',
+			'UNKNOWN-CATEGORY'=>'未知栏目',
+			'UNDEFINED'=>'未定义',
+			'MORE'=>'更多',
+
+/*
+	top.tlp.php
+*/
+			'TOP-LANG-1'=>'网站首页',
+			'TOP-LANG-2'=>'官方网站',
+			'TOP-LANG-3'=>'授权查询',
+			'TOP-LANG-4'=>'技术论坛',
+			'TOP-LANG-5'=>'帮助文档',
+			'TOP-LANG-6'=>'关闭左边菜单',
+			'TOP-LANG-6-1'=>'打开左边菜单',
+			'TOP-LANG-7'=>'更新首页',
+			'TOP-LANG-8'=>'一键更新',
+			'TOP-LANG-9'=>'修改密码',
+			'TOP-LANG-10'=>'后台首页',
+			'TOP-LANG-11'=>'网站配置',
+			'TOP-LANG-12'=>'栏目单页',
+			'TOP-LANG-12-1'=>'内容管理',
+			'TOP-LANG-13'=>'模板风格',
+			'TOP-LANG-14'=>'模块插件',
+			'TOP-LANG-15'=>'更新网站',
+			'TOP-LANG-16'=>'专用主机',
+/*
+	left.tlp.php?menu=index
+*/
+			'LEFT-INDEX-1'=>'常用操作',
+			'LEFT-INDEX-2'=>'网站配置',
+			'LEFT-INDEX-3'=>'栏目管理',
+			'LEFT-INDEX-4'=>'模板管理',
+			'LEFT-INDEX-5'=>'更新首页',
+			'LEFT-INDEX-6'=>'当前管理员',
+			'LEFT-INDEX-7'=>'修改密码',
+			'LEFT-INDEX-8'=>'操作日志',
+/*
+	left.tlp.php?menu=system  config.tlp.php
+*/
+			'LEFT-SYSTEM-1'=>'网站配置',
+			'LEFT-SYSTEM-2'=>'基本配置',
+			'LEFT-SYSTEM-3'=>'上传配置',
+			'LEFT-SYSTEM-4'=>'邮件设置',
+			'LEFT-SYSTEM-5'=>'UCenter',
+			'LEFT-SYSTEM-6'=>'性能选项',
+			'LEFT-SYSTEM-7'=>'扩展功能',
+			'LEFT-SYSTEM-8'=>'管 理 员',
+			'LEFT-SYSTEM-9'=>'后台角色管理',
+			'LEFT-SYSTEM-10'=>'管理员列表',
+			'LEFT-SYSTEM-11'=>'后台操作日志',
+			'LEFT-SYSTEM-12'=>'数据备份',
+			'LEFT-SYSTEM-13'=>'数据还原',
+			'LEFT-SYSTEM-14'=>'数据修复',
+			'LEFT-SYSTEM-15'=>'添加角色',
+			'LEFT-SYSTEM-16'=>'添加管理员',
+			'LEFT-SYSTEM-17'=>'编辑管理员',
+			'LEFT-SYSTEM-18'=>'设置权限',
+			'LEFT-SYSTEM-19'=>'添加变量',
+			'LEFT-SYSTEM-20'=>'手机短信',
+/*
+	left.tlp.php?menu=category
+*/
+			'LEFT-CATEGORY-1'=>'栏目单页',
+			'LEFT-CATEGORY-2'=>'栏目管理',
+			'LEFT-CATEGORY-3'=>'添加栏目',
+			'LEFT-CATEGORY-4'=>'批量添加栏目',
+			'LEFT-CATEGORY-5'=>'单页管理',
+			'LEFT-CATEGORY-6'=>'添加单页',
+			'LEFT-CATEGORY-7'=>'内容管理',
+			'LEFT-CATEGORY-8'=>'级联菜单',
+			'LEFT-CATEGORY-9'=>'级联菜单',
+			'LEFT-CATEGORY-10'=>'添加级联菜单',
+			'LEFT-CATEGORY-11'=>'枚举列表',
+			'LEFT-CATEGORY-12'=>'添加枚举',
+			'LEFT-CATEGORY-13'=>'编辑单页',
+/*
+	left.tlp.php?menu=template
+*/
+			'LEFT-TEMPLATE-1'=>'模板方案',
+			'LEFT-TEMPLATE-2'=>'模板管理',
+			'LEFT-TEMPLATE-3'=>'添加模板',
+			'LEFT-TEMPLATE-4'=>'数据调用',
+			'LEFT-TEMPLATE-5'=>'栏目调用',
+			'LEFT-TEMPLATE-6'=>'内容调用',
+			'LEFT-TEMPLATE-7'=>'评论调用',
+			'LEFT-TEMPLATE-8'=>'编辑模板',
+
+/*
+	left.tlp.php?menu=module
+*/
+			'LEFT-MODULE-1'=>'内容模型',
+			'LEFT-MODULE-2'=>'模型管理',
+			'LEFT-MODULE-3'=>'安装模型',
+			'LEFT-MODULE-4'=>'导入模型',
+			'LEFT-MODULE-5'=>'功能模块',
+			'LEFT-MODULE-6'=>'模块管理',
+			'LEFT-MODULE-7'=>'安装模块',
+			'LEFT-MODULE-8'=>'导入模块',
+			'LEFT-MODULE-9'=>'小 插 件',
+			'LEFT-MODULE-10'=>'插件管理',
+			'LEFT-MODULE-11'=>'正在启用',
+			'LEFT-MODULE-12'=>'搜索表单',
+			'LEFT-MODULE-13'=>'字段管理',
+			'LEFT-MODULE-14'=>'添加字段',
+			'LEFT-MODULE-15'=>'编辑字段',
+/*
+	left.tlp.php?menu=html
+*/
+			'LEFT-HTML-1'=>'更新缓存',
+			'LEFT-HTML-2'=>'所有缓存',
+			'LEFT-HTML-3'=>'模板缓存',
+			'LEFT-HTML-4'=>'栏目缓存',
+			'LEFT-HTML-5'=>'数据缓存',
+			'LEFT-HTML-6'=>'更新网站',
+			'LEFT-HTML-7'=>'一键更新',
+			'LEFT-HTML-8'=>'更新首页',
+			'LEFT-HTML-9'=>'更新栏目',
+			'LEFT-HTML-10'=>'更新内容',
+			'LEFT-HTML-11'=>'网站地图',
+			'LEFT-HTML-12'=>'更新单页',
+
+/*
+	main.tlp.php
+
+*/	
+			'MAIN-LANG-1'=>'系统信息',
+			'MAIN-LANG-2'=>'安全提示',
+			'MAIN-LANG-3'=>'版权信息',
+/**
+	model.xx.tlp.php
+*/	
+			'MODEL-LANG-1'=>'模型管理',
+			'MODEL-LANG-2'=>'安装模型',
+			'MODEL-LANG-3'=>'导入模型',
+			'MODEL-LANG-4'=>'模型预览',
+			'MODEL-LANG-5'=>'字段管理',
+			'MODEL-LANG-6'=>'添加字段',
+			'MODEL-LANG-7'=>'修改字段',
+
+/*
+	栏目管理
+*/
+			'CATEGORY-LANG-1'=>'基本设置',
+			'CATEGORY-LANG-2'=>'高级设置',
+			'CATEGORY-LANG-3'=>'栏目名称不能为空!',
+			'CATEGORY-LANG-4'=>'栏目文件夹不能为空!',
+			'CATEGORY-LANG-5'=>'单页管理!',
+			'CATEGORY-LANG-6'=>'添加单页!',
+			'CATEGORY-LANG-7'=>'编辑单页!',
+/*
+	单页管理
+*/
+			'PAGE-LANG-1'=>'单页名称不能为空!',
+			'PAGE-LANG-2'=>'文件名称不能为空!',
+			'PAGE-LANG-3'=>'请选择单页模板!',
+			'PAGE-LANG-4'=>'同名文件已存在!',
+/*
+	管理员操作
+*/
+			'ADMIN_LOGIN_ERR-1'=>'管理账号不存在!',
+			'ADMIN_LOGIN_ERR-2'=>'管理密码不正确!',
+			'ADMIN_LOGIN_ERR-3'=>'管理账号被禁用!',
+			'ADMIN_LOGIN_ERR-4'=>'您的帐号已经在别的IP下登录了!',
+			'ADMIN_LOGIN_SUCCESS'=>'管理员登陆成功!',
+			'ADMIN_LOGOUT_SUCCESS'=>'退出成功!',
+			'ADMIN_LOGIN_YET'=>'您已经登陆了!',
+			'ADMIN_FOUNDERS' =>'网站创始人',
+			'ADMIN_LOGOUT' =>'安全注销',
+			'ADMIN_ADMIN_FOUNDERS' => '不允许对网站创始人进行此项操作!',
+			'ADMIN_LOGINNING' => '不允许对当前账户进行此项操作!',
+/*
+	模块操作
+*/
+			'MODULE_PERMISSION_DENIED'=>'当前登陆账号没有此模块的管理权限!',
+			'MODULE_DISABLED'=>'该模块未安装或者已被禁用!',
+			'MODULE_FOLDER_EXISTS'=>'模块文件夹已存在, 请更换!',
+/*
+	上传类
+*/
+			'UPLOAD_ERR_OK' => '文件上传成功!',
+			'UPLOAD_ERR_TYPE' => '不允许上传此类型文件或者该文件已损坏!',
+			'UPLOAD_ERR_SIZE' => '文件上传大小超过限制!',
+			'UPLOAD_ERR_INI_SIZE'=>'上传的文件超过了 php.ini 中 upload_max_filesize 选项限制的值!',
+			'UPLOAD_ERR_FORM_SIZE'=>'上传文件的大小超过了 HTML 表单中 MAX_FILE_SIZE 选项指定的值!',
+			'UPLOAD_ERR_PARTIAL'=>'文件只有部分被上传!',
+			'UPLOAD_ERR_NO_FILE'=>'没有文件被上传!',
+			'UPLOAD_ERR_NO_TMP_DIR'=>'找不到临时文件夹!',
+			'UPLOAD_ERR_CANT_WRITE'=>'文件写入失败!',
+			'UPLOAD_ERR_DIRCANT_WRITE'=>'上传目录不可写!',
+			'UPLOAD_ERR_BAD_FILE'=>'无效的上传文件!',
+/*
+	模型操作
+*/
+			'MODEL_ERR-1'=> '请输入模型导入文件!',
+			'MODEL_ERR-2'=> '模型规则不是合法的DayuCMS模型规则!',
+			'MODEL_ERR-3'=> '系统中已经存在相同标识的模型规则!',
+/*
+	栏目操作
+*/
+			'CATEGORY_ERR_NAME'=>'栏目名称不能为空!',
+			'CATEGORY_ERR_DIR'=>'栏目目录不能为空!',
+			'CATEGORY_ERR-1'=>'有必填项未填写!',
+/*
+	相关配置
+*/
+			'AUTHOR-LANG-1'=>'作者管理',
+			'AUTHOR-LANG-2'=>'添加作者',
+			'POSID-LANG-1'=>'推荐位管理',
+			'POSID-LANG-2'=>'添加推荐位',
+			'COPYFROM-LANG-1'=>'来源管理',
+			'COPYFROM-LANG-2'=>'添加来源',
+/*
+	内容操作
+*/			
+			'CONTENT-LANG-1'=>'内容管理',
+			'CONTENT-LANG-2'=>'添加内容',
+			'CONTENT-LANG-3'=>'基本内容',
+			'CONTENT-LANG-4'=>'高级内容',
+			'CONTENT-LANG-5'=>'推送推荐位',
+			'CONTENT_ERR-1'=>'只有最终子栏目才能发布内容!',
+			'CONTENT_ERR-2'=>'目标栏目必须为最终子栏目!',
+			'CONTENT_ERR-3'=>'此栏目禁止前台会员投稿!',
+/*
+	评论操作
+*/			
+			'COMMENT-LANG-0'=>'全部评论',
+			'COMMENT-LANG-1'=>'已审评论',
+			'COMMENT-LANG-2'=>'待审评论',
+/*
+	网站更新
+*/
+			'HTML_ALL'=>'一键更新完毕!',
+			'HTML_CACHE'=>'网站缓存更新完毕!',
+			'HTML_CAT_CACHE'=>'栏目缓存更新完毕!',
+			'HTML_INDEX'=>'网站首页更新完毕!',
+			'HTML_CATEGORY'=>'网站栏目更新完毕!',
+			'HTML_CONTENT'=>'网站内容更新完毕!',
+			'HTML_RSS'=>'网站RSS地图更新完毕!',
+/*
+
+	用户登录
+*/
+			'MEMBER_LOGIN_ERR-1'=>'该用户尚未通过审核!',
+		   );
+?>

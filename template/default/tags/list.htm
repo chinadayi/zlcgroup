@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$tag}--标签列表--{$RETENG[site_name]}</title>
+<script src="{$RETENG[retengcms_path]}images/js/jquery.min.js"></script>
+<script src="{$RETENG[tlp_path]}static/js/libs/tangram/tangram-1.5.2.2.js?retengcms=1524" type="text/javascript"></script>
+<link href="{$RETENG[tlp_path]}static/css/common.css?retengcms=1524" type="text/css" rel="stylesheet"/>
+<link href="{$RETENG[tlp_path]}static/css/zimeiti.css?retengcms=1524" type="text/css" rel="stylesheet"/>
+<script language="javascript" src="/api/statistics/c.js.php?id={$id}"></script>
+</head>
+<body>
+{tlp header}
+<div id="body" class="clearfix">
+  <div class="l-main-col">
+    <div id="page_title">
+      <h1>标签：{$tag} 相关文章</h1>
+    </div>
+    <div class="feeds" id="feeds">
+	{reteng:tags row=10 tag=$tag page=$page}
+	{retengcms $reteng_page=$_DATA['pagestring'];}
+	{retengcms $pagecount=$_DATA['pagecount'];}
+      <div class="feeds-item" id="item-2241">
+        <h3><a href="{field:url}" target="_blank" >{field:title}</a></h3>
+        <div class="feeds-item-detail clearfix ">
+          {if trim(field:thumb)!=""}
+		  <p class="feeds-item-pic"><a href="{field:url}" target="_blank" class="feeds-item-more" mon="col=13&pn=1&a=12"><img src="{field:thumb}"/></a></p>
+		  {/if}
+          <p class="feeds-item-text">{field:description}<a href="{field:url}" target="_blank" class="feeds-item-more" >[详细]</a></p>
+          <p class="feeds-item-info"> <span>{date('Y-m-d h:m:s',field:updatetime)}</span><span>阅读（{field:clicks}）</span> <span><a href="javascript:void(0)" class="share-article">分享</a></span> <a href="#">{field:keywords}</a> </p>
+        </div>
+      </div>
+	 {/reteng:tags}  
+   </div>
+   {if $pagecount>1}
+    <div class="feeds-more" style="margin-bottom:10px">{$reteng_page}</div>
+	{/if}
+  </div>
+  <div class="l-right-col">
+    <div class="mod" id="tags">
+      <div class="hd">
+        <h3>推荐标签<span>TAG</span></h3>
+      </div>
+      <div class="bd">{table:tagindex row=10}<a href="/tags/?tag={field:tag}" target="_blank">{field:tag}</a>{/table:tagindex}</div>
+    </div>
+
+    <div class="mod" id="artical" alog-group="log-hotartical-num">
+      <div class="hd">
+        <h3>热门文章<span>HOT</span></h3>
+      </div>
+      <div class="bd">
+        <ul class="artical-top">
+          {reteng:content  row="1" titlelen="14" withthumb=1 orderby="clicks DESC" ismore="0" infolen=150}
+          <li class="first-item clearfix"><span><a href="{field:url}" target="_blank"><img src="{field:thumb}" id="top_hot_img" height="80"/></a></span>
+            <p class="title"><a href="{field:url}" target="_blank" title="{field:fulltitle}">{field:title}</a></p>
+            <p class="text">{field:description}</p>
+          </li>
+          {/reteng:content}
+          {reteng:content  row="9" titlelen="40" orderby="clicks DESC" ismore="0"}
+          <li><a href="{field:url}" target="_blank" title="{field:fulltitle}">{field:title}</a></li>
+          {/reteng:content}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{tlp footer}
+</body>
+</html>

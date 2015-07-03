@@ -1,0 +1,38 @@
+/*
+ * artDialog skin
+ * http://code.google.com/p/artdialog/
+ * (c) 2009-2010 TangBin, http://www.planeArt.cn
+ *
+ * This is licensed under the GNU LGPL, version 2.1 or later.
+ * For details, see: http://creativecommons.org/licenses/LGPL/2.1/
+ */
+ 
+.ui_title_wrap, .ui_bottom button { font-size:12px 'Microsoft Yahei', Arial; }
+.ui_content_wrap { min-width:9em; vertical-align:top} 
+.ui_overlay div { background:#000; filter:alpha(opacity=40); opacity:0.4; } 
+.ui_loading_tip { width:16px; height:16px; margin:-8px 0 0 -8px; text-indent:-9999em; background:url(../loading.gif) no-repeat center center; } 
+.ui_dialog_main { background:#FFF; }
+.ui_title_wrap { _width:100px; } 
+.ui_title { width:100%; height:26px; position:absolute; top:0; left:0; _left:auto; font-size:12px }
+.ui_title_text { height:26px; line-height:25px; padding:0 60px 0 12px; _padding:0 90px 0 6px; color:#fff; font-weight:700}
+.ui_td_00, .ui_td_02, .ui_td_10, .ui_td_12, .ui_td_20, .ui_td_22, .ui_close { background-image:url(../chrome_s.gif); background-repeat:no-repeat;}
+.ui_td_00 { width:5px; height:26px; background-position: -46px -9px; } 
+.ui_td_02 { width:5px; height:26px; background-position: -53px -9px; } 
+.ui_td_10 { background-position:-62px 0; background-repeat:repeat-y; } 
+.ui_td_12 { background-position:-66px 0; background-repeat:repeat-y; } 
+.ui_td_20 { width:5px; height:5px; background-position: -46px -1px;} 
+.ui_td_22 { width:5px; height:5px; background-position: -53px -1px;} 
+.ui_close { top:4px; right:6px; _right:3px; width:18px; height:18px; background-position:0 0; _font-size:0; _line-height:0; text-indent:-9999em; }
+.ui_close:hover { background-position:0 -19px; }
+.ui_td_01, .ui_td_21 { background-image:url(../border.png); background-repeat:repeat-x; }
+.ui_td_01 { background-position:0 top; }
+.ui_td_21 { background: none #FFF; border-bottom:1px solid #85b1c9}
+.ui_btns { background-color:#F6F6F6; border-top:solid 1px #DADEE5; }
+.ui_btns span, .ui_btns button {background-image:url(../btns.png); background-repeat:no-repeat; font-size:12px }
+.ui_btns span { padding:0 0 0 5px; overflow:hidden; background-position:left -42px; }
+.ui_btns button { height:21px; line-height:21px; padding:0 10px 0 5px; max-width:200px; border:none 0; background-position:right 0; }
+.ui_btns span:hover { background-position:left -63px; }
+.ui_btns span:hover button { background-position:right -21px; }
+.ui_resize { width:10px; height:10px; }
+html:hover .ui_btns button:focus { outline:none 0; }
+* html .noSkin .ui_btns { height:0; overflow:hidden; position:absolute; left:-99999em; }

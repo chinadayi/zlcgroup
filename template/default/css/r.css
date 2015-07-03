@@ -1,0 +1,11 @@
+/*s: review */
+.review_list li{position:relative;padding:0 0 10px;border-bottom:1px solid #e5e5e5}
+	.review_main{position:relative;background:#fff;}
+		.review_main p{padding:0 10px}
+			.review_content{text-indent:2em}
+	.review_reply{padding-left:10px;width:50%}
+		.review_reply p{padding:5px 10px;border:1px solid #fb9;border-left:4px solid #fb9;line-height:19px;background:#fff7e5}
+.review_support{}
+.review_oppose{}
+/*e: review */
+

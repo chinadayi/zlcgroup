@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{catname($catid)}-{$RETENG[site_name]}</title>
+<meta name="keywords" content="{$head[keywords]}" />
+<meta name="description" content="{$head[description]}" />
+<meta name="generator" content="ReTeng.Org" />
+<meta name="author" content="ReTeng.Org" />
+<meta name="copyright" content="2014 热腾网" />
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+<link rel="stylesheet" href="{$RETENG[tlp_path]}css/style.css" />
+<script type="text/javascript" src="{$RETENG[tlp_path]}scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{$RETENG[tlp_path]}js/base.js"></script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onSelectStart="return false">
+{tlp header}
+<div class="boxwrap">
+  <div class="left710">
+    <div class="content">
+      <div class="meta">
+        <h1 class="meta-tit">{$catname}</h1>
+      </div>
+      <div class="entry">
+       {$content}
+      </div>
+    </div>
+  </div>
+  {tlp _right}
+</div>
+<div class="clear"></div>
+{tlp footer}
+</body>
+</html>

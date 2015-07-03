@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<base href="{$RETENG['site_url']}" />
+<script language="javascript" src="images/js/jquery.min.js" type="text/javascript"></script>
+<script language="javascript" src="images/js/css.js" type="text/javascript"></script>
+<script language="javascript" src="member/api/login.js.php"></script>
+<script src="images/js/check.func.js"></script>
+<script language="javascript" type="text/javascript">
+	$(document).ready(function(){
+		checkForm(1);
+	});
+</script>
+<link href="template/default/css/base.css" rel="stylesheet" type="text/css">
+<link href="template/default/css/public.css" rel="stylesheet" type="text/css">
+<link href="template/default/post/css/post.css" rel="stylesheet" type="text/css">
+<title>在线投稿-{$RETENG['site_name']}</title>
+</head>
+<body>
+{tlp header}
+<div class="container">
+  <div class="page-wrap">
+    <div class="catlist">
+      <dl>
+        <dt><strong class="fz14 fl">在线投稿</strong><span class="fr"><a href="post/index.php">选择栏目</a></span></dt>
+        <dd class="border-t-no">
+          <div class="co-post">
+		  <p>
+		  <strong>在线投稿说明：</strong>
+		  <br />
+		  您当前的登录IP为 {ip2area(getIp())},请勿发布违法信息! 
+		  <br />
+		  用户注册登录之后, 可以进行投稿、审稿, 并能在线查询稿件状态及其它信息，注册会员 <a href="member/index.php?file=login&action=login">在此登录</a> 使用更多功能, 未注册用户 <a href="member/index.php?file=login&action=register">在此注册一个新账号？</a>
+		  </p>
+            <form action="" method="post" name="myform" id="myform">
+			<input type="hidden" name="dosubmit" value="1" />
+			<input type="hidden" name="catid" value="{$_GET['catid']}" />
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  	{loop $forms $val}
+                <tr>
+                  <th width="21%" scope="row" valign="top">{$val['name']}：</th>
+                  <td width="79%">{$val['form']} {$val['unit']}</td>
+                </tr>
+				{/loop}
+                </tr>
+				{if POST_CHECKCODE_ENABLED}
+                <tr>
+                  <th scope="row" valign="middle">验证码：</th>
+                  <td class="pd4"><input name="checkcode" id="checkcode" type="text" class="txt" size="4"/>
+                    <span class="code"><img src="api/imcode/checkcode.php" width="65" id="checkcode" class="checkcode" onclick="this.src='api/imcode/checkcode.php?id='+Math.random()*5;"  alt="验证码,看不清楚?请点击刷新验证码" align="absmiddle"/></span><a href="javascript:void(0);" onclick="$('.checkcode').attr('src','api/imcode/checkcode.php?id='+Math.random()*5);" class="blue fz12">换一张</a></td>
+                  <td width="0%"></td>
+                </tr>
+				{/if}
+				{if POST_ASK_ENABLED}
+				<tr>
+                  <th width="21%" scope="row" valign="top">验证问题：</th>
+                  <td width="79%">{$post_question} <input name="post_answer" type="text" class="txt" size="8"/></td>
+                </tr>
+				{/if}
+                <tr>
+                  <th scope="row" valign="top"></th>
+                  <td class="pd10">
+				  <input name="dsubmit" type="button" value="提 交"  onClick="doSubmit(this);" class="co-post-btn"/>
+                  <input type="reset" value=" 重 置 " name="reset" class="co-post-btn"/></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+{tlp footer}
+</body>
+</html>
